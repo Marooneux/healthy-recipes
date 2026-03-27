@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_projet_equipe_7/themes/colors.dart';
 import 'package:mini_projet_equipe_7/themes/typography.dart';
+import 'package:mini_projet_equipe_7/themes/spacing.dart';
 
 class RadioWidget extends StatefulWidget {
   final List<String> options;
@@ -23,26 +24,26 @@ class _RadioWidgetState extends State<RadioWidget> {
         return GestureDetector(
           onTap: () => setState(() => _selected = option),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 4),
+            padding: const EdgeInsets.symmetric(vertical: Spacing.spacing050),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
-                  width: 20,
-                  height: 20,
+                  width: Spacing.spacing250,
+                  height: Spacing.spacing250,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
                     border: Border.all(
                       color: isSelected ? AppColors.neutral900 : AppColors.neutral300,
-                      width: 1.5,
+                      width: Spacing.spacing025,
                     ),
                   ),
                   child: isSelected
                       ? Center(
                           child: Container(
-                            width: 10,
-                            height: 10,
+                            width: Spacing.spacing150,
+                            height: Spacing.spacing150,
                             decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: AppColors.neutral900,
@@ -51,7 +52,7 @@ class _RadioWidgetState extends State<RadioWidget> {
                         )
                       : null,
                 ),
-                const SizedBox(width: 8),
+                const SizedBox(width: Spacing.spacing100),
                 Text(option, style: AppTypography.preset9.copyWith(color: AppColors.neutral900)),
               ],
             ),

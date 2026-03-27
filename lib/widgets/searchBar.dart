@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_projet_equipe_7/themes/radius.dart';
+import 'package:mini_projet_equipe_7/themes/spacing.dart';
 
 class SearchBarWidget extends StatelessWidget {
   const SearchBarWidget({super.key});
@@ -9,7 +10,7 @@ class SearchBarWidget extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(Spacing.spacing100),
         child: SearchAnchor(
           builder: (BuildContext context, SearchController controller) {
             return SearchBar(

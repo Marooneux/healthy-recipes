@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_projet_equipe_7/widgets/radio.dart';
 import 'package:mini_projet_equipe_7/themes/radius.dart';
+import 'package:mini_projet_equipe_7/themes/spacing.dart';
 
 class SelectWidget extends StatefulWidget {
   final List<String> options;
@@ -26,11 +27,11 @@ class _SelectWidgetState extends State<SelectWidget> {
         GestureDetector(
           onTap: () => setState(() => _isOpen = !_isOpen),
           child: Container(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.all(Spacing.spacing150),
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: Colors.grey),
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.all(AppRadius.radius12),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,11 +44,13 @@ class _SelectWidgetState extends State<SelectWidget> {
         ),
         if (_isOpen)
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            padding: const EdgeInsets.symmetric(
+                horizontal: Spacing.spacing125,
+                vertical: Spacing.spacing100),
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: Colors.grey),
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.all(AppRadius.radius8),
             ),
             child: RadioWidget(options: widget.options),
           ),
