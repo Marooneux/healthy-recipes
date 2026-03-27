@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_projet_equipe_7/widgets/searchBar.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +13,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('Mini-Projet Homepage', style: TextStyle(fontSize: 40),),
+          child: SearchBarWidget(),
         ),
       ),
     );
