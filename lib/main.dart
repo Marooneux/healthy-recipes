@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_projet_equipe_7/widgets/radio.dart';
 import 'package:mini_projet_equipe_7/widgets/searchBar.dart';
 
 void main() {
@@ -13,7 +14,17 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SearchBarWidget(),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SearchBarWidget(),
+              SizedBox(height: 16),
+              RadioWidget(
+                options: ['10mins', '20mins', '30mins'],
+              ),
+            ],
+          ),
         ),
       ),
     );
