@@ -53,7 +53,7 @@ class _RadioWidgetState extends State<RadioWidget> {
                       : null,
                 ),
                 const SizedBox(width: Spacing.spacing100),
-                Text(option, style: AppTypography.preset9.copyWith(color: AppColors.neutral900)),
+                Text(option, style: AppTypography.preset9.copyWith(color: Colors.black)),
               ],
             ),
           ),

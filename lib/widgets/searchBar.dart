@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_projet_equipe_7/themes/radius.dart';
 import 'package:mini_projet_equipe_7/themes/spacing.dart';
+import 'package:mini_projet_equipe_7/themes/typography.dart';
 
 class SearchBarWidget extends StatelessWidget {
   const SearchBarWidget({super.key});
@@ -10,7 +11,7 @@ class SearchBarWidget extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.all(Spacing.spacing100),
+        padding: const EdgeInsets.all(Spacing.spacing150),
         child: SearchAnchor(
           builder: (BuildContext context, SearchController controller) {
             return SearchBar(
@@ -26,6 +27,7 @@ class SearchBarWidget extends StatelessWidget {
               ),
               leading: const Icon(Icons.search),
               hintText: "Nom de plat ou ingrédient",
+              hintStyle: const WidgetStatePropertyAll(AppTypography.preset9),
             );
           },
           suggestionsBuilder:

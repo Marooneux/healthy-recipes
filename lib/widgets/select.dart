@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mini_projet_equipe_7/widgets/radio.dart';
 import 'package:mini_projet_equipe_7/themes/radius.dart';
 import 'package:mini_projet_equipe_7/themes/spacing.dart';
+import 'package:mini_projet_equipe_7/themes/typography.dart';
 
 class SelectWidget extends StatefulWidget {
   final List<String> options;
@@ -18,7 +19,9 @@ class _SelectWidgetState extends State<SelectWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicWidth(
+    return Padding(
+      padding: const EdgeInsets.all(Spacing.spacing100),
+      child: IntrinsicWidth(
       child: ConstrainedBox(
       constraints: const BoxConstraints(minWidth: 200),
       child: Column(
@@ -36,7 +39,7 @@ class _SelectWidgetState extends State<SelectWidget> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(widget.titre),
+                Text(widget.titre, style: AppTypography.preset9),
                 Icon(_isOpen ? Icons.arrow_drop_up : Icons.arrow_drop_down),
               ],
             ),
@@ -57,6 +60,7 @@ class _SelectWidgetState extends State<SelectWidget> {
       ],
       ),
       ),
+    ),
     );
   }
 }
