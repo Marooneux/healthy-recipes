@@ -1,5 +1,6 @@
 /// Fichier avec toutes les valeurs d'espacement
-class AppSpacing {
+class Spacing {
+  Spacing._();
 
   static const double spacing0 = 0.0;
   static const double spacing025 = 2.0;
