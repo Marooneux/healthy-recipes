@@ -20,7 +20,7 @@ class _SelectWidgetState extends State<SelectWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(Spacing.spacing100),
+      padding: const EdgeInsets.all(AppSpacing.spacing100),
       child: IntrinsicWidth(
       child: ConstrainedBox(
       constraints: const BoxConstraints(minWidth: 200),
@@ -30,7 +30,7 @@ class _SelectWidgetState extends State<SelectWidget> {
         GestureDetector(
           onTap: () => setState(() => _isOpen = !_isOpen),
           child: Container(
-            padding: const EdgeInsets.all(Spacing.spacing150),
+            padding: const EdgeInsets.all(AppSpacing.spacing150),
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: Colors.grey),
@@ -48,8 +48,8 @@ class _SelectWidgetState extends State<SelectWidget> {
         if (_isOpen)
           Container(
             padding: const EdgeInsets.symmetric(
-                horizontal: Spacing.spacing125,
-                vertical: Spacing.spacing100),
+                horizontal: AppSpacing.spacing125,
+                vertical: AppSpacing.spacing100),
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: Colors.grey),

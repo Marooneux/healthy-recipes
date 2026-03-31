@@ -24,35 +24,35 @@ class _RadioWidgetState extends State<RadioWidget> {
         return GestureDetector(
           onTap: () => setState(() => _selected = option),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: Spacing.spacing050),
+            padding: const EdgeInsets.symmetric(vertical: AppSpacing.spacing050),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
-                  width: Spacing.spacing250,
-                  height: Spacing.spacing250,
+                  width: AppSpacing.spacing250,
+                  height: AppSpacing.spacing250,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: isSelected ? AppColors.neutral900 : AppColors.neutral300,
-                      width: Spacing.spacing025,
+                      color: isSelected ? AppColors.primary : AppColors.neutral300,
+                      width: AppSpacing.spacing025,
                     ),
                   ),
                   child: isSelected
                       ? Center(
                           child: Container(
-                            width: Spacing.spacing150,
-                            height: Spacing.spacing150,
+                            width: AppSpacing.spacing150,
+                            height: AppSpacing.spacing150,
                             decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: AppColors.neutral900,
+                              color: AppColors.primary,
                             ),
                           ),
                         )
                       : null,
                 ),
-                const SizedBox(width: Spacing.spacing100),
+                const SizedBox(width: AppSpacing.spacing100),
                 Text(option, style: AppTypography.preset9.copyWith(color: Colors.black)),
               ],
             ),
