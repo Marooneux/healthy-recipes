@@ -7,12 +7,12 @@
 
 ## 📋 Fiche d'identification
 
-| Donnée              | Valeur                     |
-|:--------------------|:---------------------------|
-| **Application**     | [Nom de l'application ici] |
-| **Numéro d'équipe** |            7               |
-| **Identifiant 1**   |         wcl5016a           |
-| **Identifiant 2**   | [def5678b]                 |
+| Donnée              | Valeur                   |
+|:--------------------|:-------------------------|
+| **Application**     | healphy-recipe           |
+| **Numéro d'équipe** | 7                        |
+| **Identifiant 1**   | wcl5016a                 |
+| **Identifiant 2**   | cmc4882a                 |
 
 
 ---

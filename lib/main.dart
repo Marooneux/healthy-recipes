@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:mini_projet_equipe_7/widgets/radio.dart';
-import 'package:mini_projet_equipe_7/widgets/searchBar.dart';
-import 'package:mini_projet_equipe_7/widgets/select.dart';
+import 'package:mini_projet_equipen/widgets/buttons.dart';
+import 'pages/home.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const Home());
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHome()
+    ); 
+  }
 }
 
 class MainApp extends StatelessWidget {
@@ -16,17 +26,11 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SearchBarWidget(),
-              SizedBox(height: 16),
-              RadioWidget(
-                options: ['10mins', '20mins', '30mins'],
-              ),
-              SizedBox(height: 16),
-              SelectWidget(titre: "Temps de préparation max",
-                  options: ['0 minutes', '10 minutes', '15 minutes'])
+              Text('Mini-Projet Homepage', style: TextStyle(fontSize: 16)),
+              AppButton(label: "Button test"),
             ],
           ),
         ),
