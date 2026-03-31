@@ -11,7 +11,7 @@ class SearchBarWidget extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.all(Spacing.spacing150),
+        padding: const EdgeInsets.all(AppSpacing.spacing150),
         child: SearchAnchor(
           builder: (BuildContext context, SearchController controller) {
             return SearchBar(

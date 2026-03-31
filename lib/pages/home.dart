@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mini_projet_equipen/themes/colors.dart';
-import 'package:mini_projet_equipen/themes/spacing.dart';
-import 'package:mini_projet_equipen/themes/typography.dart';
-import 'package:mini_projet_equipen/widgets/buttons.dart';
+import '/themes/colors.dart';
+import '/themes/spacing.dart';
+import '/themes/typography.dart';
+import '/widgets/buttons.dart';
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
