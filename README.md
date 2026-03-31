@@ -9,10 +9,10 @@
 
 | Donnée              | Valeur                     |
 |:--------------------|:---------------------------|
-| **Application**     | [Nom de l'application ici] |
-| **Numéro d'équipe** | [Num équipe]               |
+| **Application**     | [healphy-recipe] |
+| **Numéro d'équipe** | [7]               |
 | **Identifiant 1**   | [abc1234a]                 |
-| **Identifiant 2**   | [def5678b]                 |
+| **Identifiant 2**   | [cmc4882a]                 |
 
 
 ---
