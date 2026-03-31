@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:mini_projet_equipen/widgets/buttons.dart';
+import 'pages/home.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const Home());
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHome()
+    ); 
+  }
 }
 
 class MainApp extends StatelessWidget {
@@ -12,7 +25,14 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('Mini-Projet Homepage', style: TextStyle(fontSize: 40),),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('Mini-Projet Homepage', style: TextStyle(fontSize: 16)),
+              AppButton(label: "Button test"),
+            ],
+          ),
         ),
       ),
     );
