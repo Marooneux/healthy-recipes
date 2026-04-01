@@ -26,6 +26,7 @@ class RecipeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.all(AppSpacing.spacing150),
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.all(AppRadius.radius16),
