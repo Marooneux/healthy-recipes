@@ -7,18 +7,18 @@
 
 ## 📋 Fiche d'identification
 
-| Donnée              | Valeur                   |
-|:--------------------|:-------------------------|
-| **Application**     | healphy-recipe           |
-| **Numéro d'équipe** | 7                        |
-| **Identifiant 1**   | wcl5016a                 |
-| **Identifiant 2**   | cmc4882a                 |
+| Donnée              | Valeur          |
+|:--------------------|:----------------|
+| **Application**     | healthy recipes |
+| **Numéro d'équipe** | 7               |
+| **Identifiant 1**   | wcl5016a        |
+| **Identifiant 2**   | cmc4882a        |
 
 
 ---
 
 ## 📝 Description du Projet
-[Insérez ici une courte description de votre application (3-5 lignes). Expliquez son but, ses fonctionnalités principales et son public cible.]
+Notre application vise à proposer des recettes saines, tout en guidant l'utilisateur dans la réalisation de ces dernières. Elle s'adresse aux personnes qui veulent découvrir des nouvelles recettes ou qui veulent entreprendre une alimentation plus équilibrée.  
 
 ---
 
