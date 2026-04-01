@@ -55,16 +55,11 @@ class MyHome extends StatelessWidget {
                 padding: EdgeInsets.only(top: AppSpacing.spacing400),
                 child: Column(
                   children: [
-                    SvgPicture.asset("assets/images/icons/feature_icon.svg"),
-                    Text(
-                      "Whole-food recipes",
-                      style: AppTypography.preset3.copyWith(
-                        color: AppColors.neutral600,
-                      ),
-                    ),
-                    Text(
-                      "Each dish uses everyday, unprocessed ingredients.",
-                      style: AppTypography.preset6,
+                    Feature(
+                      iconPath: "assets/images/icons/feature_icon.svg",
+                      title: "Whole-food recipes",
+                      description:
+                          "Each dish uses everyday, unprocessed ingredients.",
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: AppSpacing.spacing300),
@@ -75,13 +70,116 @@ class MyHome extends StatelessWidget {
                             "All recipes are designed to make eating healthy quick and easy.",
                       ),
                     ),
+                    Padding(
+                      padding: EdgeInsets.only(top: AppSpacing.spacing300),
+                      child: Feature(
+                        iconPath:
+                            "assets/images/icons/search_menu_hamburger.svg",
+                        title: "Search in seconds",
+                        description:
+                            "Filter by name or ingredient and jump straight to the recipe you need.",
+                      ),
+                    ),
                   ],
                 ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: AppSpacing.spacing800),
+                child: BuiltForLife(),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: AppSpacing.spacing800,
+                  left: AppSpacing.spacing200,
+                  right: AppSpacing.spacing200,
+                ),
+                child: CallToAction(),
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class CallToAction extends StatelessWidget {
+  const CallToAction({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      // mainAxisAlignment: MainAxisAlignment.center,
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          vertical: AppSpacing.spacing600,
+          horizontal: AppSpacing.spacing200,
+        ),
+        child: Column(
+          children: [
+            Text(
+              "Ready to cook smarter ?",
+              textAlign: TextAlign.center,
+              style: AppTypography.preset2Mobile.copyWith(
+                color: AppColors.primary,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: AppSpacing.spacing125),
+              child: Text(
+                "Hit the button, pick a recipe, and get dinner on the table—fast.",
+                textAlign: TextAlign.center,
+                style: AppTypography.preset6,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: AppSpacing.spacing400),
+              child: AppButton(label: "Brouse recipes"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class BuiltForLife extends StatelessWidget {
+  const BuiltForLife({super.key});
+
+  @override
+  Widget build(BuildContext build) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Text(
+          "Built for real life",
+          textAlign: TextAlign.left,
+          style: AppTypography.preset2Mobile.copyWith(color: AppColors.primary),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: AppSpacing.spacing250),
+          child: Text(
+            "Cooking shouldn’t be complicated. These recipes come in under "
+            "30 minutes of active time, fit busy schedules, and taste good "
+            "enough to repeat.",
+            textAlign: TextAlign.left,
+            style: AppTypography.preset6,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: AppSpacing.spacing250),
+          child: Text(
+            "Whether you’re new to the kitchen or just need fresh ideas, we’ve got you covered.",
+            textAlign: TextAlign.left,
+            style: AppTypography.preset6,
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: AppSpacing.spacing400),
+          child: Image.asset("assets/images/man-preparing-food-table.png"),
+        ),
+      ],
     );
   }
 }
@@ -102,14 +200,14 @@ class Feature extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-            
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        SvgPicture.asset(_iconPath),
+        SvgPicture.asset(_iconPath, semanticsLabel: 'Dart Logo'),
         Text(
           _title,
+          textAlign: TextAlign.left,
           style: AppTypography.preset3.copyWith(color: AppColors.neutral600),
         ),
         Text(_description, style: AppTypography.preset6),
