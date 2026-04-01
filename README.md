@@ -7,12 +7,12 @@
 
 ## 📋 Fiche d'identification
 
-| Donnée              | Valeur                   |
-|:--------------------|:-------------------------|
-| **Application**     | healphy-recipe           |
-| **Numéro d'équipe** | 7                        |
-| **Identifiant 1**   | wcl5016a                 |
-| **Identifiant 2**   | cmc4882a                 |
+| Donnée              | Valeur          |
+|:--------------------|:----------------|
+| **Application**     | healthy recipes |
+| **Numéro d'équipe** | 7               |
+| **Identifiant 1**   | wcl5016a        |
+| **Identifiant 2**   | cmc4882a        |
 
 
 ---

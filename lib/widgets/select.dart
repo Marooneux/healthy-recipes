@@ -20,10 +20,9 @@ class _SelectWidgetState extends State<SelectWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(AppSpacing.spacing100),
-      child: IntrinsicWidth(
-      child: ConstrainedBox(
-      constraints: const BoxConstraints(minWidth: 200),
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.spacing200, vertical: AppSpacing.spacing100),
+      child: SizedBox(
+      width: double.infinity,
       child: Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -33,11 +32,11 @@ class _SelectWidgetState extends State<SelectWidget> {
             padding: const EdgeInsets.all(AppSpacing.spacing150),
             decoration: BoxDecoration(
               color: Colors.white,
-              border: Border.all(color: Colors.grey),
+              border: Border.all(color: Colors.black),
               borderRadius: BorderRadius.all(AppRadius.radius12),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(widget.titre, style: AppTypography.preset9),
                 Icon(_isOpen ? Icons.arrow_drop_up : Icons.arrow_drop_down),
@@ -60,7 +59,6 @@ class _SelectWidgetState extends State<SelectWidget> {
       ],
       ),
       ),
-    ),
     );
   }
 }
