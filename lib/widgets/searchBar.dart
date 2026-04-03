@@ -26,7 +26,7 @@ class SearchBarWidget extends StatelessWidget {
                 ),
               ),
               leading: const Icon(Icons.search),
-              hintText: "Nom de plat ou ingrédient",
+              hintText: "Search by name or ingredient...",
               hintStyle: const WidgetStatePropertyAll(AppTypography.preset9),
             );
           },

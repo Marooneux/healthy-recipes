@@ -11,58 +11,66 @@ Future<Database> getDatabase() async {
 
   db = await openDatabase(
     path,
-    version: 1,
+    version: 3,
+    onUpgrade: (db, oldVersion, newVersion) async {
+      await db.execute('DROP TABLE IF EXISTS dish');
+      await _createAndPopulate(db);
+    },
     onCreate: (db, version) async {
-      await db.execute('''
-        CREATE TABLE dish (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          imageUrl TEXT,
-          title TEXT,
-          description TEXT,
-          portions INTEGER,
-          preparation INTEGER,
-          cuisson INTEGER,
-          ingredients TEXT,
-          etapes TEXT
-        )
-      ''');
-
-      await db.insert('dish', {
-        'imageUrl': 'assets/images/tsuvian.jpg',
-        'title': 'Tsuvian',
-        'description': 'Le tsuivan est une spécialité culinaire originaire de Mongolie. Il s\'agit traditionnellement d\'un plat de pâtes avec de la viande.',
-        'portions': 2,
-        'preparation': 30,
-        'cuisson': 30,
-        'ingredients': '200 g de pâtes larges||300 g de bœuf en fines lamelles||1 oignon émincé||2 carottes en julienne||1 poivron rouge émincé||2 gousses d\'ail||2 c. à soupe d\'huile végétale||Sel et poivre',
-        'etapes': 'Faire chauffer l\'huile dans une grande poêle ou un wok à feu vif. Faire revenir l\'oignon et l\'ail pendant 2 minutes.||Ajouter les lamelles de bœuf et faire sauter jusqu\'à ce qu\'elles soient dorées, environ 5 minutes.||Incorporer les carottes et le poivron. Mélanger et cuire 5 minutes supplémentaires.||Ajouter les pâtes crues directement dans la poêle avec un verre d\'eau. Mélanger, couvrir et laisser cuire à feu moyen pendant 15 à 20 minutes en remuant régulièrement.||Assaisonner avec sel et poivre. Servir chaud.',
-      });
-
-      await db.insert('dish', {
-        'imageUrl': 'assets/images/ratatouille.jpg',
-        'title': 'Ratatouille',
-        'description': 'La ratatouille est un plat traditionnel provençal à base de légumes mijotés.',
-        'portions': 4,
-        'preparation': 20,
-        'cuisson': 45,
-        'ingredients': '1 aubergine||2 courgettes||1 poivron rouge||1 poivron jaune||3 tomates||1 oignon||2 gousses d\'ail||Huile d\'olive||Herbes de Provence||Sel et poivre',
-        'etapes': 'Couper tous les légumes en dés.||Faire revenir l\'oignon et l\'ail dans l\'huile d\'olive pendant 3 minutes.||Ajouter l\'aubergine et cuire 5 minutes.||Ajouter les courgettes, les poivrons et les tomates.||Assaisonner avec les herbes de Provence, le sel et le poivre.||Couvrir et laisser mijoter à feu doux pendant 35 minutes.',
-      });
-
-      await db.insert('dish', {
-        'imageUrl': 'assets/images/quiche-legumes.jpg',
-        'title': 'Quiche Lorraine',
-        'description': 'La quiche lorraine est une tarte salée classique à base de lardons et de crème.',
-        'portions': 6,
-        'preparation': 15,
-        'cuisson': 35,
-        'ingredients': '1 pâte brisée||200 g de lardons||3 œufs||20 cl de crème fraîche||20 cl de lait||100 g de gruyère râpé||Sel, poivre et noix de muscade',
-        'etapes': 'Préchauffer le four à 180°C.||Étaler la pâte brisée dans un moule à tarte.||Faire revenir les lardons à la poêle sans matière grasse.||Mélanger les œufs, la crème et le lait. Assaisonner.||Répartir les lardons sur la pâte, verser l\'appareil par-dessus.||Saupoudrer de gruyère râpé.||Cuire au four pendant 35 minutes jusqu\'à ce que la quiche soit dorée.',
-      });
+      await _createAndPopulate(db);
     },
   );
 
   return db!;
+}
+
+Future<void> _createAndPopulate(Database db) async {
+  await db.execute('''
+    CREATE TABLE dish (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      imageUrl TEXT,
+      title TEXT,
+      description TEXT,
+      portions INTEGER,
+      preparation INTEGER,
+      cuisson INTEGER,
+      ingredients TEXT,
+      etapes TEXT
+    )
+  ''');
+
+  await db.insert('dish', {
+    'imageUrl': 'assets/images/tsuvian.jpg',
+    'title': 'Tsuvian',
+    'description': 'Tsuvian is a traditional mongolian dish. It\'s made using noodles and meat.',
+    'portions': 2,
+    'preparation': 30,
+    'cuisson': 30,
+    'ingredients': '200g of your noodle of choice||300g of beef cut in stripes||1 diced onion||2 carrots cut into julienne||1 diced red pepper||2 cloves of garlic||2 tbsp vegetable oil||Salt and pepper',
+    'etapes': 'Heat oil in a large pan or wok over high heat. Sauté the onion and garlic for 2 minutes.||Add the beef strips and stir-fry until golden, about 5 minutes.||Add the carrots and bell pepper. Stir and cook for 5 more minutes.||Add the raw noodles directly to the pan with a glass of water. Stir, cover, and cook over medium heat for 15 to 20 minutes, stirring regularly.||Season with salt and pepper. Serve hot.',
+  });
+
+  await db.insert('dish', {
+    'imageUrl': 'assets/images/ratatouille.jpg',
+    'title': 'Ratatouille',
+    'description': 'Ratatouille is a classic Provençal stewed vegetable dish from the south of France.',
+    'portions': 4,
+    'preparation': 20,
+    'cuisson': 45,
+    'ingredients': '1 eggplant||2 zucchinis||1 red bell pepper||1 yellow bell pepper||3 tomatoes||1 onion||2 garlic cloves||Olive oil||Herbes de Provence||Salt and pepper',
+    'etapes': 'Dice all vegetables.||Sauté the onion and garlic in olive oil for 3 minutes.||Add the eggplant and cook for 5 minutes.||Add the zucchinis, bell peppers, and tomatoes.||Season with herbes de Provence, salt, and pepper.||Cover and simmer over low heat for 35 minutes.',
+  });
+
+  await db.insert('dish', {
+    'imageUrl': 'assets/images/quiche.webp',
+    'title': 'Quiche Lorraine',
+    'description': 'Quiche Lorraine is a classic French savoury tart made with bacon and cream.',
+    'portions': 6,
+    'preparation': 15,
+    'cuisson': 35,
+    'ingredients': '1 shortcrust pastry||200g bacon lardons||3 eggs||200ml heavy cream||200ml milk||100g grated gruyère||Salt, pepper, and nutmeg',
+    'etapes': 'Preheat the oven to 180°C.||Roll out the pastry into a tart tin.||Cook the lardons in a dry pan until lightly browned.||Mix the eggs, cream, and milk together. Season.||Spread the lardons over the pastry and pour the egg mixture on top.||Sprinkle with grated gruyère.||Bake for 35 minutes until golden.',
+  });
 }
 
 Future<int> insertDish(Dish dish) async {

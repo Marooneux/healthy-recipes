@@ -2,67 +2,73 @@ import 'package:flutter/material.dart';
 import '/widgets/select.dart';
 import '/widgets/searchBar.dart';
 import '/widgets/recipeItem.dart';
-import '/themes/colors.dart';
 import '/themes/spacing.dart';
 import '/themes/typography.dart';
+import '/modele/database.dart';
+import '/modele/dish.dart';
 
-class Recipes extends StatelessWidget {
+class Recipes extends StatefulWidget {
   const Recipes({super.key});
 
   @override
+  State<Recipes> createState() => _RecipesState();
+}
+
+class _RecipesState extends State<Recipes> {
+  List<Dish> dishes = [];
+
+  @override
+  void initState() {
+    super.initState();
+    loadDishes();
+  }
+
+  void loadDishes() async {
+    List<Dish> result = await getAllDishes();
+    setState(() {
+      dishes = result;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-      return Scaffold(
-        body: ListView(
-          children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: AppSpacing.spacing200,
-                vertical: AppSpacing.spacing300,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Trouvez votre recette',
-                    style: AppTypography.preset3,
-                  ),
-                  SizedBox(height: AppSpacing.spacing100),
-                  Text(
-                    'Filtrez par temps de préparation, de cuisson, ou recherchez directement un plat.',
-                    style: AppTypography.preset9,
-                  ),
-                ],
-              ),
+    return Scaffold(
+      body: ListView(
+        children: [
+          const Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: AppSpacing.spacing200,
+              vertical: AppSpacing.spacing300,
             ),
-            const SelectWidget(options: ["5 mins", "10 mins", "15 mins"], titre: "Temps de préparation max"),
-            const SelectWidget(options: ["5 mins", "10 mins", "15 mins"], titre: "Temps de cuisson max"),
-            const SearchBarWidget(),
-            const RecipeItem(
-              imageUrl: 'assets/images/tsuvian.jpg',
-              titre: 'Tsuvian',
-              description: 'Le tsuivan est une spécialité culinaire originaire de Mongolie. Il s\'agit traditionnellement d\'un plat de pâtes avec de la viande.',
-              portions: 2,
-              preparation: 30,
-              cuisson: 30,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Explore our recipes',
+                  style: AppTypography.preset3,
+                ),
+                SizedBox(height: AppSpacing.spacing100),
+                Text(
+                  'Discover our quick and delicious dishes Use the search bar to find a recipe by name or ingredient, or simply scroll dow the list.',
+                  style: AppTypography.preset9,
+                ),
+              ],
             ),
-            const RecipeItem(
-              imageUrl: 'assets/images/quiche-legumes.jpg',
-              titre: 'Quiche aux légumes',
-              description: 'Découvrez notre quiche au légume : une recette généreuse et végétarienne, qui met à l’honneur les saveurs de saison.',
-              portions: 6,
-              preparation: 10,
-              cuisson: 30,
+          ),
+          const SelectWidget(options: ["5 mins", "10 mins", "15 mins"], titre: "Max preparation time"),
+          const SelectWidget(options: ["5 mins", "10 mins", "15 mins"], titre: "Max cooking time"),
+          const SearchBarWidget(),
+          for (Dish dish in dishes)
+            RecipeItem(
+              imageUrl: dish.imageUrl,
+              titre: dish.title,
+              description: dish.description,
+              portions: dish.portions,
+              preparation: dish.preparation,
+              cuisson: dish.cuisson,
             ),
-            const RecipeItem(
-              imageUrl: 'assets/images/ratatouille.jpg',
-              titre: 'Ratatouille',
-              description: 'C’est l’un des plats typiques de la Provence : la ratatouille !',
-              portions: 6,
-              preparation: 15,
-              cuisson: 60,
-            )
-          ],
-        ),
+        ],
+      ),
     );
   }
 }
