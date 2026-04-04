@@ -17,6 +17,9 @@ class Recipes extends StatefulWidget {
 
 class _RecipesState extends State<Recipes> {
   List<Dish> dishes = [];
+  int? _maxPrepFilter;
+  int? _maxCookFilter;
+  String _searchQuery = '';
 
   @override
   void initState() {
@@ -31,8 +34,19 @@ class _RecipesState extends State<Recipes> {
     });
   }
 
+  List<Dish> get _filteredDishes {
+    return dishes.where((dish) {
+      if (_maxPrepFilter != null && dish.preparation > _maxPrepFilter!) return false;
+      if (_maxCookFilter != null && dish.cuisson > _maxCookFilter!) return false;
+      if (_searchQuery.isNotEmpty &&
+          !dish.title.toLowerCase().contains(_searchQuery.toLowerCase())) return false;
+      return true;
+    }).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
+    final filtered = _filteredDishes;
     return Scaffold(
       body: ListView(
         children: [
@@ -56,10 +70,20 @@ class _RecipesState extends State<Recipes> {
               ],
             ),
           ),
-          const SelectWidget(options: ["5 mins", "10 mins", "15 mins"], titre: "Max preparation time"),
-          const SelectWidget(options: ["5 mins", "10 mins", "15 mins"], titre: "Max cooking time"),
-          const SearchBarWidget(),
-          for (Dish dish in dishes)
+          SelectWidget(
+            options: const ["Any", "15 mins", "30 mins", "45 mins", "60 mins"],
+            titre: "Max preparation time",
+            onChanged: (value) => setState(() => _maxPrepFilter = value),
+          ),
+          SelectWidget(
+            options: const ["Any", "15 mins", "30 mins", "45 mins", "60 mins"],
+            titre: "Max cooking time",
+            onChanged: (value) => setState(() => _maxCookFilter = value),
+          ),
+          SearchBarWidget(
+            onChanged: (value) => setState(() => _searchQuery = value),
+          ),
+          for (Dish dish in filtered)
             RecipeItem(
               imageUrl: dish.imageUrl,
               titre: dish.title,

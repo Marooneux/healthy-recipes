@@ -4,36 +4,36 @@ import 'package:mini_projet_equipe_7/themes/spacing.dart';
 import 'package:mini_projet_equipe_7/themes/typography.dart';
 
 class SearchBarWidget extends StatelessWidget {
-  const SearchBarWidget({super.key});
+  final ValueChanged<String>? onChanged;
+
+  const SearchBarWidget({super.key, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: AppSpacing.spacing200, vertical: AppSpacing.spacing100),
-        child: SearchAnchor(
-          builder: (BuildContext context, SearchController controller) {
-            return SearchBar(
-              backgroundColor: const WidgetStatePropertyAll(Colors.white),
-              shadowColor: const WidgetStatePropertyAll(Colors.transparent),
-              elevation: const WidgetStatePropertyAll(0),
-              controller: controller,
-              shape: const WidgetStatePropertyAll(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(AppRadius.radius12),
-                  side: BorderSide(color: Colors.black, width: 1),
-                ),
-              ),
-              leading: const Icon(Icons.search),
-              hintText: "Search by name or ingredient...",
-              hintStyle: const WidgetStatePropertyAll(AppTypography.preset9),
-            );
-          },
-          suggestionsBuilder:
-              (BuildContext context, SearchController controller) {
-            return [];
-          },
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.spacing200, vertical: AppSpacing.spacing100),
+      child: TextField(
+        onChanged: onChanged,
+        style: AppTypography.preset9,
+        decoration: InputDecoration(
+          prefixIcon: const Icon(Icons.search),
+          hintText: "Search by name or ingredient...",
+          hintStyle: AppTypography.preset9,
+          filled: true,
+          fillColor: Colors.white,
+          contentPadding: const EdgeInsets.all(AppSpacing.spacing150),
+          border: OutlineInputBorder(
+            borderRadius: const BorderRadius.all(AppRadius.radius12),
+            borderSide: const BorderSide(color: Colors.black, width: 1),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: const BorderRadius.all(AppRadius.radius12),
+            borderSide: const BorderSide(color: Colors.black, width: 1),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: const BorderRadius.all(AppRadius.radius12),
+            borderSide: const BorderSide(color: Colors.black, width: 1),
+          ),
         ),
       ),
     );
