@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'colors.dart';
 
 /// Classe contenant tous les styles de texte de l'application.
 class AppTypography {
@@ -10,6 +11,7 @@ class AppTypography {
     fontSize: 72.0,
     height: 1.1,
     letterSpacing: -2.0,
+    color: AppColors.primary
   );
 
 
@@ -19,15 +21,17 @@ class AppTypography {
     fontSize: 64.0,
     height: 1.1,
     letterSpacing: -2.0,
+    color: AppColors.primary
   );
 
   // Text Preset 1 (Mobile)
-  static const TextStyle preset1Mobile = TextStyle(
+  static const TextStyle preset1Mobile = TextStyle (
     fontFamily: 'Nunito',
     fontWeight: FontWeight.w800,
     fontSize: 52.0,
     height: 1.1,
     letterSpacing: -2.0,
+    color: AppColors.primary
   );
 
   // Text Preset 2 (Desktop)
@@ -37,6 +41,7 @@ class AppTypography {
     fontSize: 48.0,
     height: 1.2,
     letterSpacing: -2.0,
+    color: AppColors.primary
   );
 
   // Text Preset 2 (Mobile)
@@ -46,6 +51,7 @@ class AppTypography {
     fontSize: 40.0,
     height: 1.2,
     letterSpacing: -2.0,
+    color: AppColors.primary
   );
 
   // Text Preset 3
@@ -55,6 +61,7 @@ class AppTypography {
     fontSize: 32.0,
     height: 1.3,
     letterSpacing: -1.0,
+    color: AppColors.primary
   );
 
   // Text Preset 4
@@ -64,6 +71,7 @@ class AppTypography {
     fontSize: 24.0,
     height: 1.3,
     letterSpacing: -1.0,
+    color: AppColors.primary
   );
 
   // Text Preset 5
