@@ -17,7 +17,7 @@ class SearchBarWidget extends StatelessWidget {
         style: AppTypography.preset9,
         decoration: InputDecoration(
           prefixIcon: const Icon(Icons.search),
-          hintText: "Search by name or ingredient...",
+          hintText: "Search by name...",
           hintStyle: AppTypography.preset9,
           filled: true,
           fillColor: Colors.white,
