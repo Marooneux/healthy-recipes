@@ -5,8 +5,10 @@ import 'package:mini_projet_equipe_7/themes/spacing.dart';
 
 class RadioWidget extends StatefulWidget {
   final List<String> options;
+  final ValueChanged<String?>? onChanged;
+  final String? selectedValue;
 
-  const RadioWidget({super.key, required this.options});
+  const RadioWidget({super.key, required this.options, this.onChanged, this.selectedValue});
 
   @override
   State<RadioWidget> createState() => _RadioWidgetState();
@@ -16,13 +18,22 @@ class _RadioWidgetState extends State<RadioWidget> {
   String? _selected;
 
   @override
+  void initState() {
+    super.initState();
+    _selected = widget.selectedValue;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: widget.options.map((option) {
         bool isSelected = _selected == option;
         return GestureDetector(
-          onTap: () => setState(() => _selected = option),
+          onTap: () {
+              setState(() => _selected = option);
+              widget.onChanged?.call(option);
+            },
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: AppSpacing.spacing050),
             child: Row(
