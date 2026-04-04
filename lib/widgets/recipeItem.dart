@@ -12,6 +12,7 @@ class RecipeItem extends StatelessWidget {
   final int portions;
   final int preparation;
   final int cuisson;
+  final VoidCallback? onPressed;
 
   const RecipeItem({
     super.key,
@@ -21,6 +22,7 @@ class RecipeItem extends StatelessWidget {
     required this.portions,
     required this.preparation,
     required this.cuisson,
+    this.onPressed,
   });
 
   @override
@@ -82,13 +84,13 @@ class RecipeItem extends StatelessWidget {
               Icon(Icons.soup_kitchen, size: 24, color: AppColors.neutral600),
               const SizedBox(width: AppSpacing.spacing100),
               Text(
-                'Cuisson: $cuisson mins',
+                'Cooking: $cuisson mins',
                 style: AppTypography.preset9.copyWith(color: AppColors.neutral600),
               ),
             ],
           ),
           const SizedBox(height: AppSpacing.spacing200),
-          AppButton(label: 'Voir la recette'),
+          AppButton(label: 'View recipe', onPressed: onPressed),
         ],
       ),
     );
