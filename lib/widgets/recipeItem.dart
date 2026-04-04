@@ -12,6 +12,7 @@ class RecipeItem extends StatelessWidget {
   final int portions;
   final int preparation;
   final int cuisson;
+  final VoidCallback? onPressed;
 
   const RecipeItem({
     super.key,
@@ -21,6 +22,7 @@ class RecipeItem extends StatelessWidget {
     required this.portions,
     required this.preparation,
     required this.cuisson,
+    this.onPressed,
   });
 
   @override
@@ -88,7 +90,7 @@ class RecipeItem extends StatelessWidget {
             ],
           ),
           const SizedBox(height: AppSpacing.spacing200),
-          AppButton(label: 'View recipe'),
+          AppButton(label: 'View recipe', onPressed: onPressed),
         ],
       ),
     );

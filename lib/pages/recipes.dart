@@ -6,6 +6,7 @@ import '/themes/spacing.dart';
 import '/themes/typography.dart';
 import '/modele/database.dart';
 import '/modele/dish.dart';
+import '/pages/recipeDetail.dart';
 
 class Recipes extends StatefulWidget {
   const Recipes({super.key});
@@ -66,6 +67,14 @@ class _RecipesState extends State<Recipes> {
               portions: dish.portions,
               preparation: dish.preparation,
               cuisson: dish.cuisson,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RecipeDetailPage(dish: dish),
+                  ),
+                );
+              },
             ),
         ],
       ),

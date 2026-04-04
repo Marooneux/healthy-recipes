@@ -1,12 +1,3 @@
-import 'package:flutter/material.dart';
-import '/widgets/select.dart';
-import '../widgets/searchBar.dart';
-import '../widgets/recipeItem.dart';
-import '../widgets/step.dart';
-import '../themes/colors.dart';
-import '../themes/spacing.dart';
-import '../themes/typography.dart';
-import '../pages/recipeDetail.dart';
 
 class Dish {
   final String imageUrl;
