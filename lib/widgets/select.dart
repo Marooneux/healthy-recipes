@@ -17,8 +17,8 @@ class SelectWidget extends StatefulWidget {
 
 class _SelectWidgetState extends State<SelectWidget> {
   bool _isOpen = false;
-  String? _selectedLabel;  // affiché dans le bouton (null = aucun filtre actif)
-  String? _radioSelected;  // valeur cochée dans la liste radio
+  String? _selectedLabel;
+  String? _radioSelected;
 
   void _handleRadioChange(String? value) {
     final isNeutral = value == null || value == "Any";

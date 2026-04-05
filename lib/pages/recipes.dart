@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '/widgets/select.dart';
 import '/widgets/searchBar.dart';
 import '/widgets/recipeItem.dart';
+import '/widgets/navbar.dart';
 import '/themes/spacing.dart';
 import '/themes/typography.dart';
 import '/modele/database.dart';
@@ -48,6 +49,7 @@ class _RecipesState extends State<Recipes> {
   Widget build(BuildContext context) {
     final filtered = _filteredDishes;
     return Scaffold(
+      appBar: const AppNavBar(),
       body: ListView(
         children: [
           const Padding(

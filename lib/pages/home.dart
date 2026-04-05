@@ -5,6 +5,7 @@ import '/themes/spacing.dart';
 import '/themes/typography.dart';
 import '/widgets/buttons.dart';
 import '/widgets/call_to_action.dart';
+import '/widgets/navbar.dart';
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
@@ -12,7 +13,7 @@ class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Home page")),
+      appBar: const AppNavBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: AppSpacing.spacing200),
