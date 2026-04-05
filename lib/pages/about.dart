@@ -4,6 +4,7 @@ import '/themes/radius.dart';
 import '/themes/spacing.dart';
 import '/themes/typography.dart';
 import '/widgets/call_to_action.dart';
+import '/widgets/navbar.dart';
 
 const Reasons foodPhilosophyReasons = Reasons(
   title: "Our food philosophy",
@@ -70,7 +71,7 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("About Page")),
+      appBar: const AppNavBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(top: AppSpacing.spacing600, left: AppSpacing.spacing200, right: AppSpacing.spacing200),

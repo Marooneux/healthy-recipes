@@ -4,6 +4,7 @@ import '../themes/radius.dart';
 import '../themes/spacing.dart';
 import '../themes/typography.dart';
 import '../widgets/step.dart';
+import '../widgets/navbar.dart';
 import '../modele/dish.dart';
 
 class RecipeDetailPage extends StatelessWidget {
@@ -42,6 +43,7 @@ class RecipeDetailPage extends StatelessWidget {
     final paysage = MediaQuery.of(context).orientation == Orientation.landscape;
 
     return Scaffold(
+      appBar: const AppNavBar(),
       body: ListView(
         padding: const EdgeInsets.all(AppSpacing.spacing200),
         children: [

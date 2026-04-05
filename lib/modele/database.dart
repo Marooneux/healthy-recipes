@@ -11,7 +11,7 @@ Future<Database> getDatabase() async {
 
   db = await openDatabase(
     path,
-    version: 3,
+    version: 4,
     onUpgrade: (db, oldVersion, newVersion) async {
       await db.execute('DROP TABLE IF EXISTS dish');
       await _createAndPopulate(db);
@@ -70,6 +70,39 @@ Future<void> _createAndPopulate(Database db) async {
     'cuisson': 35,
     'ingredients': '1 shortcrust pastry||200g bacon lardons||3 eggs||200ml heavy cream||200ml milk||100g grated gruyère||Salt, pepper, and nutmeg',
     'etapes': 'Preheat the oven to 180°C.||Roll out the pastry into a tart tin.||Cook the lardons in a dry pan until lightly browned.||Mix the eggs, cream, and milk together. Season.||Spread the lardons over the pastry and pour the egg mixture on top.||Sprinkle with grated gruyère.||Bake for 35 minutes until golden.',
+  });
+
+  await db.insert('dish', {
+    'imageUrl': 'assets/images/pelmeni.png',
+    'title': 'Pelmeni',
+    'description': 'Pelmeni are traditional Russian dumplings filled with seasoned minced meat, boiled and served with butter or sour cream.',
+    'portions': 4,
+    'preparation': 60,
+    'cuisson': 10,
+    'ingredients': '300g plain flour||1 egg||150ml warm water||1 tsp salt (for dough)||250g ground beef||250g ground pork||1 onion, finely grated||Salt and pepper||Butter and sour cream to serve',
+    'etapes': 'Mix flour, egg, water, and salt into a smooth dough. Cover and rest for 30 minutes.||Combine the ground beef, pork, grated onion, salt, and pepper to make the filling.||Roll the dough thinly and cut out circles about 7cm in diameter.||Place a small teaspoon of filling in the centre of each circle.||Fold the dough over and pinch the edges firmly, then join the two ends to form a crescent shape.||Bring a large pot of salted water to a boil. Cook the pelmeni in batches for 8 to 10 minutes until they float and are cooked through.||Serve hot with a knob of butter and a dollop of sour cream.',
+  });
+
+  await db.insert('dish', {
+    'imageUrl': 'assets/images/shakshuka.png',
+    'title': 'Shakshuka',
+    'description': 'Shakshuka is a North African and Middle Eastern dish of eggs poached in a spiced tomato and pepper sauce.',
+    'portions': 3,
+    'preparation': 10,
+    'cuisson': 25,
+    'ingredients': '6 eggs||400g canned crushed tomatoes||2 red bell peppers, diced||1 onion, diced||3 garlic cloves, minced||1 tsp cumin||1 tsp paprika||1/2 tsp chili flakes||2 tbsp olive oil||Salt and pepper||Fresh parsley or coriander',
+    'etapes': 'Heat olive oil in a wide pan over medium heat. Sauté the onion for 5 minutes.||Add the garlic and bell peppers. Cook for another 5 minutes.||Stir in the cumin, paprika, and chili flakes. Cook for 1 minute.||Pour in the crushed tomatoes. Season with salt and pepper. Simmer for 10 minutes.||Make small wells in the sauce and crack an egg into each one.||Cover and cook over low heat for 5 to 7 minutes until the egg whites are set but yolks are still runny.||Garnish with fresh herbs and serve with crusty bread.',
+  });
+
+  await db.insert('dish', {
+    'imageUrl': 'assets/images/padthai.png',
+    'title': 'Pad Thai crevettes',
+    'description': 'Pad Thai is a stir-fried rice noodle dish from Thailand, packed with shrimp, tofu, eggs, and a tangy tamarind sauce.',
+    'portions': 2,
+    'preparation': 20,
+    'cuisson': 15,
+    'ingredients': '200g flat rice noodles||150g shrimp, peeled||100g firm tofu, cubed||2 eggs||3 tbsp tamarind paste||2 tbsp fish sauce||1 tbsp sugar||2 spring onions, chopped||50g bean sprouts||2 tbsp vegetable oil||Crushed peanuts and lime to serve',
+    'etapes': 'Soak the rice noodles in warm water for 20 minutes, then drain.||Mix the tamarind paste, fish sauce, and sugar in a small bowl. Set aside.||Heat oil in a wok over high heat. Fry the tofu until golden, then push to the side.||Add the shrimp and cook until pink. Push to the side.||Crack the eggs into the wok and scramble lightly.||Add the noodles and pour in the sauce. Toss everything together over high heat for 3 minutes.||Add the bean sprouts and spring onions. Toss for 1 more minute.||Serve topped with crushed peanuts and a wedge of lime.',
   });
 }
 

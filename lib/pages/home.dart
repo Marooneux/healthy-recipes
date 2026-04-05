@@ -5,6 +5,7 @@ import '/themes/spacing.dart';
 import '/themes/typography.dart';
 import '/widgets/buttons.dart';
 import '/widgets/call_to_action.dart';
+import '/widgets/navbar.dart';
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
@@ -12,7 +13,7 @@ class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Home page")),
+      appBar: const AppNavBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: AppSpacing.spacing200),
@@ -27,7 +28,7 @@ class MyHome extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing200),
                 child: Text(
-                  "Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.",
+                  "Discover our quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.",
                   style: AppTypography.preset4.copyWith(
                     color: AppColors.neutral600,
                   ),
@@ -35,7 +36,10 @@ class MyHome extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing400),
-                child: AppButton(label: "Start Exploring"),
+                child: AppButton(
+                  label: "Start Exploring",
+                  onPressed: () => Navigator.pushNamed(context, '/recipes'),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing500),
@@ -76,7 +80,7 @@ class MyHome extends StatelessWidget {
                             "assets/images/icons/search_menu_hamburger.svg",
                         title: "Search in seconds",
                         description:
-                            "Filter by name or ingredient and jump straight to the recipe you need.",
+                            "Filter by name or preparation time and jump straight to the recipe you need.",
                       ),
                     ),
                   ],
@@ -119,8 +123,8 @@ class BuiltForLife extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(top: AppSpacing.spacing250),
           child: Text(
-            "Cooking shouldn’t be complicated. These recipes come in under "
-            "30 minutes of active time, fit busy schedules, and taste good "
+            "Cooking shouldn’t be complicated. These recipes are simple to make, "
+            "fit busy schedules, and taste good "
             "enough to repeat.",
             textAlign: TextAlign.left,
             style: AppTypography.preset6,
