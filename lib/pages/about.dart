@@ -5,71 +5,65 @@ import '/themes/spacing.dart';
 import '/themes/typography.dart';
 import '/widgets/call_to_action.dart';
 import '/widgets/navbar.dart';
-
-const Reasons foodPhilosophyReasons = Reasons(
-  title: "Our food philosophy",
-  items: [
-    Reason(
-      title: "Whole ingredients first.",
-      description:
-          "Fresh produce, grains, legumes, herbs, and quality fats form the backbone of every recipe.",
-    ),
-    Reason(
-      title: "Flavor without compromise.",
-      description:
-          "Spices, citrus, and natural sweetness replace excess salt, sugar, and additives.",
-    ),
-    Reason(
-      title: "Respect for time.",
-      description:
-          "Weeknight meals should slot into real schedules; weekend cooking can be leisurely but never wasteful.",
-    ),
-    Reason(
-      title: "Sustainable choices.",
-      description:
-          "Short ingredient lists cut down on food waste and carbon footprint, while plant-forward dishes keep things planet-friendly.",
-    ),
-  ],
-);
-
-const Reasons whyWeExistReasons = Reasons(
-  title: "Why we exist",
-  items: [
-    Reason(
-      title: "Cut through the noise.",
-      description:
-          "The internet is bursting with recipes, yet most busy cooks still default to take-away or packaged foods. We curate a tight collection of fool-proof dishes so you can skip the scrolling and start cooking.",
-    ),
-    Reason(
-      title: "Empower home kitchens.",
-      description:
-          "When you control what goes into your meals, you control how you feel. Every recipe is built around unrefined ingredients and ready in about half an hour of active prep.",
-    ),
-    Reason(
-      title: "Make healthy look good.",
-      description:
-          "High-resolution imagery shows you exactly what success looks like—because we eat with our eyes first, and confidence matters.",
-    ),
-  ],
-);
-
-const BeyondPlateSection beyondPlateSection = BeyondPlateSection(
-  title: "Beyond the plate",
-  intro:
-      "We believe food is a catalyst for community and well-being. By sharing approachable recipes, we hope to:",
-  points: [
-    "Encourage family dinners and social cooking.",
-    "Reduce reliance on single-use packaging and delivery waste.",
-    "Spark curiosity about seasonal produce and local agriculture.",
-  ],
-  imagePath: "assets/images/front-view-family-having-fun-while-preparing-food.png",
-);
+import '/l10n/app_localizations.dart';
 
 class About extends StatelessWidget {
   const About({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final whyWeExistReasons = Reasons(
+      title: l10n.aboutWhyWeExistTitle,
+      items: [
+        Reason(
+          title: l10n.aboutWhyWeExistReason1Title,
+          description: l10n.aboutWhyWeExistReason1Description,
+        ),
+        Reason(
+          title: l10n.aboutWhyWeExistReason2Title,
+          description: l10n.aboutWhyWeExistReason2Description,
+        ),
+        Reason(
+          title: l10n.aboutWhyWeExistReason3Title,
+          description: l10n.aboutWhyWeExistReason3Description,
+        ),
+      ],
+    );
+
+    final foodPhilosophyReasons = Reasons(
+      title: l10n.aboutFoodPhilosophyTitle,
+      items: [
+        Reason(
+          title: l10n.aboutFoodPhilosophyReason1Title,
+          description: l10n.aboutFoodPhilosophyReason1Description,
+        ),
+        Reason(
+          title: l10n.aboutFoodPhilosophyReason2Title,
+          description: l10n.aboutFoodPhilosophyReason2Description,
+        ),
+        Reason(
+          title: l10n.aboutFoodPhilosophyReason3Title,
+          description: l10n.aboutFoodPhilosophyReason3Description,
+        ),
+        Reason(
+          title: l10n.aboutFoodPhilosophyReason4Title,
+          description: l10n.aboutFoodPhilosophyReason4Description,
+        ),
+      ],
+    );
+
+    final beyondPlateSection = BeyondPlateSection(
+      title: l10n.aboutBeyondPlateTitle,
+      intro: l10n.aboutBeyondPlateIntro,
+      points: [
+        l10n.aboutBeyondPlatePoint1,
+        l10n.aboutBeyondPlatePoint2,
+        l10n.aboutBeyondPlatePoint3,
+      ],
+      imagePath: "assets/images/front-view-family-having-fun-while-preparing-food.png",
+    );
+
     return Scaffold(
       appBar: const AppNavBar(),
       body: SingleChildScrollView(
@@ -81,18 +75,18 @@ class About extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: AppSpacing.spacing200),
                 child: Text(
-                  "Help more people cook nourishing meals, more often.",
+                  l10n.aboutHeadline,
                   style: AppTypography.preset1Mobile,
                 ),
               ),
               Text(
-                "Healthy Recipe Finder was created to prove that healthy eating can be convenient, affordable, and genuinely delicious.",
+                l10n.aboutIntro,
                 style: AppTypography.preset6,
               ),
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing200),
                 child: Text(
-                  "We showcase quick, whole-food dishes that anyone can master—no fancy equipment, no ultra-processed shortcuts—just honest ingredients and straightforward steps.",
+                  l10n.aboutIntroExtended,
                   style: AppTypography.preset6,
                 ),
               ),

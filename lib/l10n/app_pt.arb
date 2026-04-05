@@ -1,109 +1,109 @@
 {
-  "@@locale": "en",
-  "test": "I am the english file",
+  "@@locale": "pt",
+  "test": "Sou o ficheiro em português",
 
-  "navHome": "Home",
-  "navAbout": "About",
-  "navRecipes": "Recipes",
+  "navHome": "Início",
+  "navAbout": "Sobre",
+  "navRecipes": "Receitas",
 
-  "homeHeroTitle": "Healthy meals, zero fuss",
-  "homeHeroDescription": "Discover our quick, whole-food recipes that you can cook tonight-no processed junk, no guesswork.",
-  "homeStartExploring": "Start Exploring",
-  "homeBenefitsTitle": "What you'll get",
-  "homeFeatureWholeFoodTitle": "Whole-food recipes",
-  "homeFeatureWholeFoodDescription": "Each dish uses everyday, unprocessed ingredients.",
-  "homeFeatureMinimumFussTitle": "Minimum fuss",
-  "homeFeatureMinimumFussDescription": "All recipes are designed to make eating healthy quick and easy.",
-  "homeFeatureSearchTitle": "Search in seconds",
-  "homeFeatureSearchDescription": "Filter by name or preparation time and jump straight to the recipe you need.",
-  "homeBuiltForLifeTitle": "Built for real life",
-  "homeBuiltForLifeParagraph1": "Cooking shouldn't be complicated. These recipes are simple to make, fit busy schedules, and taste good enough to repeat.",
-  "homeBuiltForLifeParagraph2": "Whether you're new to the kitchen or just need fresh ideas, we've got you covered.",
-  "homeFeatureIconSemanticsLabel": "Dart Logo",
+  "homeHeroTitle": "Refeições saudáveis, sem complicação",
+  "homeHeroDescription": "Descobre as nossas receitas rápidas e naturais que podes cozinhar hoje, sem processados e sem stress.",
+  "homeStartExploring": "Explorar",
+  "homeBenefitsTitle": "O que vais encontrar",
+  "homeFeatureWholeFoodTitle": "Receitas naturais",
+  "homeFeatureWholeFoodDescription": "Cada prato usa ingredientes do dia a dia e pouco processados.",
+  "homeFeatureMinimumFussTitle": "Mínimo esforço",
+  "homeFeatureMinimumFussDescription": "Todas as receitas foram pensadas para comer bem de forma rápida e simples.",
+  "homeFeatureSearchTitle": "Pesquisa em segundos",
+  "homeFeatureSearchDescription": "Filtra por nome ou tempo de preparação e encontra logo a receita certa.",
+  "homeBuiltForLifeTitle": "Feito para a vida real",
+  "homeBuiltForLifeParagraph1": "Cozinhar não deve ser complicado. Estas receitas são simples, adaptadas a agendas cheias e saborosas para repetir.",
+  "homeBuiltForLifeParagraph2": "Se estás a começar na cozinha ou procuras novas ideias, estamos aqui para ajudar.",
+  "homeFeatureIconSemanticsLabel": "Logotipo Dart",
 
-  "recipesPageTitle": "Explore our recipes",
-  "recipesPageDescription": "Discover our quick and delicious dishes Use the search bar to find a recipe by name, preparation or cook time, or simply scroll dow the list.",
-  "recipesFilterAny": "Any",
-  "recipesFilter15Mins": "15 mins",
-  "recipesFilter30Mins": "30 mins",
-  "recipesFilter45Mins": "45 mins",
-  "recipesFilter60Mins": "60 mins",
-  "recipesFilterMaxPreparation": "Max preparation time",
-  "recipesFilterMaxCooking": "Max cooking time",
-  "recipesSearchHint": "Search by name...",
+  "recipesPageTitle": "Explora as nossas receitas",
+  "recipesPageDescription": "Descobre pratos rápidos e deliciosos. Usa a barra de pesquisa para encontrar receitas por nome, tempo de preparação ou de confeção.",
+  "recipesFilterAny": "Qualquer",
+  "recipesFilter15Mins": "15 min",
+  "recipesFilter30Mins": "30 min",
+  "recipesFilter45Mins": "45 min",
+  "recipesFilter60Mins": "60 min",
+  "recipesFilterMaxPreparation": "Tempo máximo de preparação",
+  "recipesFilterMaxCooking": "Tempo máximo de confeção",
+  "recipesSearchHint": "Pesquisar por nome...",
 
-  "recipeCardPortions": "Portions: {count}",
+  "recipeCardPortions": "Doses: {count}",
   "@recipeCardPortions": {
     "placeholders": {
       "count": {}
     }
   },
-  "recipeCardPreparation": "Preparation: {minutes} mins",
+  "recipeCardPreparation": "Preparação: {minutes} min",
   "@recipeCardPreparation": {
     "placeholders": {
       "minutes": {}
     }
   },
-  "recipeCardCooking": "Cooking: {minutes} mins",
+  "recipeCardCooking": "Cozedura: {minutes} min",
   "@recipeCardCooking": {
     "placeholders": {
       "minutes": {}
     }
   },
-  "recipeCardViewRecipe": "View recipe",
+  "recipeCardViewRecipe": "Ver receita",
 
-  "recipeDetailIngredients": "Ingredients",
-  "recipeDetailPreparation": "Preparation",
-  "recipeDetailPortions": "Portions: {count}",
+  "recipeDetailIngredients": "Ingredientes",
+  "recipeDetailPreparation": "Preparação",
+  "recipeDetailPortions": "Doses: {count}",
   "@recipeDetailPortions": {
     "placeholders": {
       "count": {}
     }
   },
-  "recipeDetailPreparationTime": "Preparation: {minutes} mins",
+  "recipeDetailPreparationTime": "Preparação: {minutes} min",
   "@recipeDetailPreparationTime": {
     "placeholders": {
       "minutes": {}
     }
   },
-  "recipeDetailCuissonTime": "Cuisson: {minutes} mins",
+  "recipeDetailCuissonTime": "Cozedura: {minutes} min",
   "@recipeDetailCuissonTime": {
     "placeholders": {
       "minutes": {}
     }
   },
 
-  "aboutHeadline": "Help more people cook nourishing meals, more often.",
-  "aboutIntro": "Healthy Recipe Finder was created to prove that healthy eating can be convenient, affordable, and genuinely delicious.",
-  "aboutIntroExtended": "We showcase quick, whole-food dishes that anyone can master-no fancy equipment, no ultra-processed shortcuts-just honest ingredients and straightforward steps.",
+  "aboutHeadline": "Ajudar mais pessoas a cozinhar refeições nutritivas, mais vezes.",
+  "aboutIntro": "Healthy Recipe Finder foi criado para provar que comer de forma saudável pode ser prático, acessível e delicioso.",
+  "aboutIntroExtended": "Mostramos pratos rapidos e naturais que qualquer pessoa consegue preparar, sem equipamento especial e sem atalhos ultra-processados.",
 
-  "aboutWhyWeExistTitle": "Why we exist",
-  "aboutWhyWeExistReason1Title": "Cut through the noise.",
-  "aboutWhyWeExistReason1Description": "The internet is bursting with recipes, yet most busy cooks still default to take-away or packaged foods. We curate a tight collection of fool-proof dishes so you can skip the scrolling and start cooking.",
-  "aboutWhyWeExistReason2Title": "Empower home kitchens.",
-  "aboutWhyWeExistReason2Description": "When you control what goes into your meals, you control how you feel. Every recipe is built around unrefined ingredients and ready in about half an hour of active prep.",
-  "aboutWhyWeExistReason3Title": "Make healthy look good.",
-  "aboutWhyWeExistReason3Description": "High-resolution imagery shows you exactly what success looks like-because we eat with our eyes first, and confidence matters.",
+  "aboutWhyWeExistTitle": "Por que existimos",
+  "aboutWhyWeExistReason1Title": "Menos ruído, mais cozinha.",
+  "aboutWhyWeExistReason1Description": "A internet está cheia de receitas, mas muita gente continua a optar por take-away. Selecionamos receitas fiáveis para poupares tempo e começares logo a cozinhar.",
+  "aboutWhyWeExistReason2Title": "Dar poder à cozinha de casa.",
+  "aboutWhyWeExistReason2Description": "Quando controlas o que entra nas refeições, controlas como te sentes. Cada receita usa ingredientes simples e preparação ativa curta.",
+  "aboutWhyWeExistReason3Title": "Comer saudável também é apetitoso.",
+  "aboutWhyWeExistReason3Description": "Imagens de qualidade mostram exatamente o resultado esperado, porque também comemos com os olhos.",
 
-  "aboutFoodPhilosophyTitle": "Our food philosophy",
-  "aboutFoodPhilosophyReason1Title": "Whole ingredients first.",
-  "aboutFoodPhilosophyReason1Description": "Fresh produce, grains, legumes, herbs, and quality fats form the backbone of every recipe.",
-  "aboutFoodPhilosophyReason2Title": "Flavor without compromise.",
-  "aboutFoodPhilosophyReason2Description": "Spices, citrus, and natural sweetness replace excess salt, sugar, and additives.",
-  "aboutFoodPhilosophyReason3Title": "Respect for time.",
-  "aboutFoodPhilosophyReason3Description": "Weeknight meals should slot into real schedules; weekend cooking can be leisurely but never wasteful.",
-  "aboutFoodPhilosophyReason4Title": "Sustainable choices.",
-  "aboutFoodPhilosophyReason4Description": "Short ingredient lists cut down on food waste and carbon footprint, while plant-forward dishes keep things planet-friendly.",
+  "aboutFoodPhilosophyTitle": "A nossa filosofia alimentar",
+  "aboutFoodPhilosophyReason1Title": "Ingredientes inteiros primeiro.",
+  "aboutFoodPhilosophyReason1Description": "Produtos frescos, grãos, leguminosas, ervas e boas gorduras são a base de cada receita.",
+  "aboutFoodPhilosophyReason2Title": "Sabor sem compromisso.",
+  "aboutFoodPhilosophyReason2Description": "Especiarias, citrinos e doçura natural substituem excesso de sal, açúcar e aditivos.",
+  "aboutFoodPhilosophyReason3Title": "Respeito pelo tempo.",
+  "aboutFoodPhilosophyReason3Description": "As refeições da semana devem encaixar na vida real; ao fim de semana pode ser mais demorado, sem desperdício.",
+  "aboutFoodPhilosophyReason4Title": "Escolhas sustentáveis.",
+  "aboutFoodPhilosophyReason4Description": "Listas de ingredientes curtas reduzem desperdício e pegada ambiental, enquanto pratos com base vegetal ajudam o planeta.",
 
-  "aboutBeyondPlateTitle": "Beyond the plate",
-  "aboutBeyondPlateIntro": "We believe food is a catalyst for community and well-being. By sharing approachable recipes, we hope to:",
-  "aboutBeyondPlatePoint1": "Encourage family dinners and social cooking.",
-  "aboutBeyondPlatePoint2": "Reduce reliance on single-use packaging and delivery waste.",
-  "aboutBeyondPlatePoint3": "Spark curiosity about seasonal produce and local agriculture.",
+  "aboutBeyondPlateTitle": "Para além do prato",
+  "aboutBeyondPlateIntro": "Acreditamos que a comida aproxima pessoas e melhora o bem-estar. Ao partilhar receitas acessíveis, queremos:",
+  "aboutBeyondPlatePoint1": "Incentivar jantares em família e cozinha partilhada.",
+  "aboutBeyondPlatePoint2": "Reduzir dependência de embalagens descartáveis e resíduos de entrega.",
+  "aboutBeyondPlatePoint3": "Despertar curiosidade por produtos sazonais e agricultura local.",
 
-  "ctaTitle": "Ready to cook smarter ?",
-  "ctaDescription": "Hit the button, pick a recipe, and get dinner on the table-fast.",
-  "ctaBrowseRecipes": "Browse recipes",
+  "ctaTitle": "Pronto para cozinhar de forma mais inteligente?",
+  "ctaDescription": "Clica no botão, escolhe uma receita e tem o jantar na mesa rapidamente.",
+  "ctaBrowseRecipes": "Ver receitas",
 
   "dishTsuvianTitle": "Tsuvian",
   "dishTsuvianDescription": "Tsuvian is a traditional mongolian dish. It's made using noodles and meat.",

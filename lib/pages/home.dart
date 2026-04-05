@@ -6,12 +6,14 @@ import '/themes/typography.dart';
 import '/widgets/buttons.dart';
 import '/widgets/call_to_action.dart';
 import '/widgets/navbar.dart';
+import '/l10n/app_localizations.dart';
 
 class MyHome extends StatelessWidget {
   const MyHome({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: const AppNavBar(),
       body: SingleChildScrollView(
@@ -22,13 +24,13 @@ class MyHome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                "Healthy meals, zero fuss",
+                l10n.homeHeroTitle,
                 style: AppTypography.preset1Mobile,
               ),
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing200),
                 child: Text(
-                  "Discover our quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.",
+                  l10n.homeHeroDescription,
                   style: AppTypography.preset4.copyWith(
                     color: AppColors.neutral600,
                   ),
@@ -37,7 +39,7 @@ class MyHome extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing400),
                 child: AppButton(
-                  label: "Start Exploring",
+                  label: l10n.homeStartExploring,
                   onPressed: () => Navigator.pushNamed(context, '/recipes'),
                 ),
               ),
@@ -48,7 +50,7 @@ class MyHome extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing800),
                 child: Text(
-                  "What you’ll get",
+                  l10n.homeBenefitsTitle,
                   style: AppTypography.preset2Mobile.copyWith(
                     color: AppColors.neutral600,
                   ),
@@ -60,17 +62,17 @@ class MyHome extends StatelessWidget {
                   children: [
                     Feature(
                       iconPath: "assets/images/icons/feature_icon.svg",
-                      title: "Whole-food recipes",
-                      description:
-                          "Each dish uses everyday, unprocessed ingredients.",
+                      title: l10n.homeFeatureWholeFoodTitle,
+                      description: l10n.homeFeatureWholeFoodDescription,
+                      semanticsLabel: l10n.homeFeatureIconSemanticsLabel,
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: AppSpacing.spacing300),
                       child: Feature(
                         iconPath: "assets/images/icons/flash.svg",
-                        title: "Minimum fuss",
-                        description:
-                            "All recipes are designed to make eating healthy quick and easy.",
+                        title: l10n.homeFeatureMinimumFussTitle,
+                        description: l10n.homeFeatureMinimumFussDescription,
+                        semanticsLabel: l10n.homeFeatureIconSemanticsLabel,
                       ),
                     ),
                     Padding(
@@ -78,9 +80,9 @@ class MyHome extends StatelessWidget {
                       child: Feature(
                         iconPath:
                             "assets/images/icons/search_menu_hamburger.svg",
-                        title: "Search in seconds",
-                        description:
-                            "Filter by name or preparation time and jump straight to the recipe you need.",
+                        title: l10n.homeFeatureSearchTitle,
+                        description: l10n.homeFeatureSearchDescription,
+                        semanticsLabel: l10n.homeFeatureIconSemanticsLabel,
                       ),
                     ),
                   ],
@@ -88,7 +90,11 @@ class MyHome extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing800),
-                child: BuiltForLife(),
+                child: BuiltForLife(
+                  title: l10n.homeBuiltForLifeTitle,
+                  paragraph1: l10n.homeBuiltForLifeParagraph1,
+                  paragraph2: l10n.homeBuiltForLifeParagraph2,
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -107,25 +113,32 @@ class MyHome extends StatelessWidget {
 }
 
 class BuiltForLife extends StatelessWidget {
-  const BuiltForLife({super.key});
+  final String title;
+  final String paragraph1;
+  final String paragraph2;
+
+  const BuiltForLife({
+    super.key,
+    required this.title,
+    required this.paragraph1,
+    required this.paragraph2,
+  });
 
   @override
-  Widget build(BuildContext build) {
+  Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
-          "Built for real life",
+          title,
           textAlign: TextAlign.left,
           style: AppTypography.preset2Mobile.copyWith(color: AppColors.primary),
         ),
         Padding(
           padding: EdgeInsets.only(top: AppSpacing.spacing250),
           child: Text(
-            "Cooking shouldn’t be complicated. These recipes are simple to make, "
-            "fit busy schedules, and taste good "
-            "enough to repeat.",
+            paragraph1,
             textAlign: TextAlign.left,
             style: AppTypography.preset6,
           ),
@@ -133,7 +146,7 @@ class BuiltForLife extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(top: AppSpacing.spacing250),
           child: Text(
-            "Whether you’re new to the kitchen or just need fresh ideas, we’ve got you covered.",
+            paragraph2,
             textAlign: TextAlign.left,
             style: AppTypography.preset6,
           ),
@@ -151,15 +164,18 @@ class Feature extends StatelessWidget {
   final String _iconPath;
   final String _title;
   final String _description;
+  final String _semanticsLabel;
 
   const Feature({
     super.key,
     required String iconPath,
     required String title,
     required String description,
+     required String semanticsLabel,
   }) : _iconPath = iconPath,
        _title = title,
-       _description = description;
+       _description = description,
+       _semanticsLabel = semanticsLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -167,7 +183,7 @@ class Feature extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        SvgPicture.asset(_iconPath, semanticsLabel: 'Dart Logo'),
+        SvgPicture.asset(_iconPath, semanticsLabel: _semanticsLabel),
         Text(
           _title,
           textAlign: TextAlign.left,

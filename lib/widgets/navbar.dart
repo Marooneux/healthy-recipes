@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '/themes/colors.dart';
 import '/themes/spacing.dart';
 import '/themes/typography.dart';
+import '/l10n/app_localizations.dart';
 
 class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
   const AppNavBar({super.key});
@@ -12,6 +13,7 @@ class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     final currentRoute = ModalRoute.of(context)?.settings.name;
+    final l10n = AppLocalizations.of(context)!;
 
     return AppBar(
       backgroundColor: AppColors.neutral100,
@@ -35,9 +37,9 @@ class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
             Navigator.pushNamedAndRemoveUntil(context, route, (r) => false);
           },
           itemBuilder: (context) => [
-            _buildItem('/home', Icons.home_outlined, 'Home', currentRoute),
-            _buildItem('/about', Icons.info_outline, 'About', currentRoute),
-            _buildItem('/recipes', Icons.restaurant_menu_outlined, 'Recipes', currentRoute),
+            _buildItem('/home', Icons.home_outlined, l10n.navHome, currentRoute),
+            _buildItem('/about', Icons.info_outline, l10n.navAbout, currentRoute),
+            _buildItem('/recipes', Icons.restaurant_menu_outlined, l10n.navRecipes, currentRoute),
           ],
         ),
         const SizedBox(width: AppSpacing.spacing100),

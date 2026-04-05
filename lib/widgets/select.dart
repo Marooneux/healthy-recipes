@@ -21,12 +21,12 @@ class _SelectWidgetState extends State<SelectWidget> {
   String? _radioSelected;
 
   void _handleRadioChange(String? value) {
-    final isNeutral = value == null || value == "Any";
+    final isNeutral = value == null || value == widget.options.first;
     setState(() {
       _radioSelected = value;
       _selectedLabel = isNeutral ? null : value;
     });
-    widget.onChanged?.call(isNeutral ? null : int.tryParse(value!.split(' ')[0]));
+    widget.onChanged?.call(isNeutral ? null : int.tryParse(value.split(' ')[0]));
   }
 
   @override

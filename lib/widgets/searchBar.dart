@@ -5,8 +5,9 @@ import 'package:mini_projet_equipe_7/themes/typography.dart';
 
 class SearchBarWidget extends StatelessWidget {
   final ValueChanged<String>? onChanged;
+  final String hintText;
 
-  const SearchBarWidget({super.key, this.onChanged});
+  const SearchBarWidget({super.key, this.onChanged, required this.hintText});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class SearchBarWidget extends StatelessWidget {
         style: AppTypography.preset9,
         decoration: InputDecoration(
           prefixIcon: const Icon(Icons.search),
-          hintText: "Search by name...",
+          hintText: hintText,
           hintStyle: AppTypography.preset9,
           filled: true,
           fillColor: Colors.white,

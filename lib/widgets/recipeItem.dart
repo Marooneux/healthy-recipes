@@ -4,6 +4,7 @@ import '../themes/radius.dart';
 import '../themes/spacing.dart';
 import '../themes/typography.dart';
 import 'buttons.dart';
+import '../l10n/app_localizations.dart';
 
 class RecipeItem extends StatelessWidget {
   final String imageUrl;
@@ -27,6 +28,7 @@ class RecipeItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       margin: const EdgeInsets.all(AppSpacing.spacing150),
       decoration: BoxDecoration(
@@ -62,7 +64,7 @@ class RecipeItem extends StatelessWidget {
               Icon(Icons.person, size: 24, color: AppColors.neutral600),
               const SizedBox(width: AppSpacing.spacing100),
               Text(
-                'Portions: $portions',
+                l10n.recipeCardPortions(portions),
                 style: AppTypography.preset9.copyWith(color: AppColors.neutral600),
               ),
             ],
@@ -73,7 +75,7 @@ class RecipeItem extends StatelessWidget {
               Icon(Icons.timer, size: 24, color: AppColors.neutral600),
               const SizedBox(width: AppSpacing.spacing100),
               Text(
-                'Preparation: $preparation mins',
+                l10n.recipeCardPreparation(preparation),
                 style: AppTypography.preset9.copyWith(color: AppColors.neutral600),
               ),
             ],
@@ -84,13 +86,13 @@ class RecipeItem extends StatelessWidget {
               Icon(Icons.soup_kitchen, size: 24, color: AppColors.neutral600),
               const SizedBox(width: AppSpacing.spacing100),
               Text(
-                'Cooking: $cuisson mins',
+                l10n.recipeCardCooking(cuisson),
                 style: AppTypography.preset9.copyWith(color: AppColors.neutral600),
               ),
             ],
           ),
           const SizedBox(height: AppSpacing.spacing200),
-          AppButton(label: 'View recipe', onPressed: onPressed),
+          AppButton(label: l10n.recipeCardViewRecipe, onPressed: onPressed),
         ],
       ),
     );

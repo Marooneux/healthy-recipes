@@ -4,11 +4,12 @@ import '/widgets/searchBar.dart';
 import '/widgets/recipeItem.dart';
 import '/widgets/navbar.dart';
 import '/themes/spacing.dart';
-import '/themes/colors.dart';
 import '/themes/typography.dart';
 import '/modele/database.dart';
 import '/modele/dish.dart';
+import '/modele/dish_localization.dart';
 import '/pages/recipeDetail.dart';
+import '/l10n/app_localizations.dart';
 
 class Recipes extends StatefulWidget {
   const Recipes({super.key});
@@ -36,24 +37,26 @@ class _RecipesState extends State<Recipes> {
     });
   }
 
-  List<Dish> get _filteredDishes {
+  List<Dish> _filteredDishes(AppLocalizations l10n) {
     return dishes.where((dish) {
       if (_maxPrepFilter != null && dish.preparation > _maxPrepFilter!) return false;
       if (_maxCookFilter != null && dish.cuisson > _maxCookFilter!) return false;
+      final localizedTitle = localizedDishTitle(l10n, dish).toLowerCase();
       if (_searchQuery.isNotEmpty &&
-          !dish.title.toLowerCase().contains(_searchQuery.toLowerCase())) return false;
+          !localizedTitle.contains(_searchQuery.toLowerCase())) return false;
       return true;
     }).toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    final filtered = _filteredDishes;
+    final l10n = AppLocalizations.of(context)!;
+    final filtered = _filteredDishes(l10n);
     return Scaffold(
       appBar: const AppNavBar(),
       body: ListView(
         children: [
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(
               horizontal: AppSpacing.spacing200,
               vertical: AppSpacing.spacing300,
@@ -62,35 +65,48 @@ class _RecipesState extends State<Recipes> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Explore our recipes',
+                  l10n.recipesPageTitle,
                   style: AppTypography.preset3,
                 ),
                 SizedBox(height: AppSpacing.spacing100),
                 Text(
-                  'Discover our quick and delicious dishes Use the search bar to find a recipe by name, preparation or cook time, or simply scroll dow the list.',
+                  l10n.recipesPageDescription,
                   style: AppTypography.preset6
                 ),
               ],
             ),
           ),
           SelectWidget(
-            options: const ["Any", "15 mins", "30 mins", "45 mins", "60 mins"],
-            titre: "Max preparation time",
+            options: [
+              l10n.recipesFilterAny,
+              l10n.recipesFilter15Mins,
+              l10n.recipesFilter30Mins,
+              l10n.recipesFilter45Mins,
+              l10n.recipesFilter60Mins,
+            ],
+            titre: l10n.recipesFilterMaxPreparation,
             onChanged: (value) => setState(() => _maxPrepFilter = value),
           ),
           SelectWidget(
-            options: const ["Any", "15 mins", "30 mins", "45 mins", "60 mins"],
-            titre: "Max cooking time",
+            options: [
+              l10n.recipesFilterAny,
+              l10n.recipesFilter15Mins,
+              l10n.recipesFilter30Mins,
+              l10n.recipesFilter45Mins,
+              l10n.recipesFilter60Mins,
+            ],
+            titre: l10n.recipesFilterMaxCooking,
             onChanged: (value) => setState(() => _maxCookFilter = value),
           ),
           SearchBarWidget(
+            hintText: l10n.recipesSearchHint,
             onChanged: (value) => setState(() => _searchQuery = value),
           ),
           for (Dish dish in filtered)
             RecipeItem(
               imageUrl: dish.imageUrl,
-              titre: dish.title,
-              description: dish.description,
+              titre: localizedDishTitle(l10n, dish),
+              description: localizedDishDescription(l10n, dish),
               portions: dish.portions,
               preparation: dish.preparation,
               cuisson: dish.cuisson,

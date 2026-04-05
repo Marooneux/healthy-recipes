@@ -4,235 +4,237 @@ import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
 
-/// The translations for English (`en`).
-class AppLocalizationsEn extends AppLocalizations {
-  AppLocalizationsEn([String locale = 'en']) : super(locale);
+/// The translations for Portuguese (`pt`).
+class AppLocalizationsPt extends AppLocalizations {
+  AppLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
-  String get test => 'I am the english file';
+  String get test => 'Sou o ficheiro em português';
 
   @override
-  String get navHome => 'Home';
+  String get navHome => 'Início';
 
   @override
-  String get navAbout => 'About';
+  String get navAbout => 'Sobre';
 
   @override
-  String get navRecipes => 'Recipes';
+  String get navRecipes => 'Receitas';
 
   @override
-  String get homeHeroTitle => 'Healthy meals, zero fuss';
+  String get homeHeroTitle => 'Refeições saudáveis, sem complicação';
 
   @override
   String get homeHeroDescription =>
-      'Discover our quick, whole-food recipes that you can cook tonight-no processed junk, no guesswork.';
+      'Descobre as nossas receitas rápidas e naturais que podes cozinhar hoje, sem processados e sem stress.';
 
   @override
-  String get homeStartExploring => 'Start Exploring';
+  String get homeStartExploring => 'Explorar';
 
   @override
-  String get homeBenefitsTitle => 'What you\'ll get';
+  String get homeBenefitsTitle => 'O que vais encontrar';
 
   @override
-  String get homeFeatureWholeFoodTitle => 'Whole-food recipes';
+  String get homeFeatureWholeFoodTitle => 'Receitas naturais';
 
   @override
   String get homeFeatureWholeFoodDescription =>
-      'Each dish uses everyday, unprocessed ingredients.';
+      'Cada prato usa ingredientes do dia a dia e pouco processados.';
 
   @override
-  String get homeFeatureMinimumFussTitle => 'Minimum fuss';
+  String get homeFeatureMinimumFussTitle => 'Mínimo esforço';
 
   @override
   String get homeFeatureMinimumFussDescription =>
-      'All recipes are designed to make eating healthy quick and easy.';
+      'Todas as receitas foram pensadas para comer bem de forma rápida e simples.';
 
   @override
-  String get homeFeatureSearchTitle => 'Search in seconds';
+  String get homeFeatureSearchTitle => 'Pesquisa em segundos';
 
   @override
   String get homeFeatureSearchDescription =>
-      'Filter by name or preparation time and jump straight to the recipe you need.';
+      'Filtra por nome ou tempo de preparação e encontra logo a receita certa.';
 
   @override
-  String get homeBuiltForLifeTitle => 'Built for real life';
+  String get homeBuiltForLifeTitle => 'Feito para a vida real';
 
   @override
   String get homeBuiltForLifeParagraph1 =>
-      'Cooking shouldn\'t be complicated. These recipes are simple to make, fit busy schedules, and taste good enough to repeat.';
+      'Cozinhar não deve ser complicado. Estas receitas são simples, adaptadas a agendas cheias e saborosas para repetir.';
 
   @override
   String get homeBuiltForLifeParagraph2 =>
-      'Whether you\'re new to the kitchen or just need fresh ideas, we\'ve got you covered.';
+      'Se estás a começar na cozinha ou procuras novas ideias, estamos aqui para ajudar.';
 
   @override
-  String get homeFeatureIconSemanticsLabel => 'Dart Logo';
+  String get homeFeatureIconSemanticsLabel => 'Logotipo Dart';
 
   @override
-  String get recipesPageTitle => 'Explore our recipes';
+  String get recipesPageTitle => 'Explora as nossas receitas';
 
   @override
   String get recipesPageDescription =>
-      'Discover our quick and delicious dishes Use the search bar to find a recipe by name, preparation or cook time, or simply scroll dow the list.';
+      'Descobre pratos rápidos e deliciosos. Usa a barra de pesquisa para encontrar receitas por nome, tempo de preparação ou de confeção.';
 
   @override
-  String get recipesFilterAny => 'Any';
+  String get recipesFilterAny => 'Qualquer';
 
   @override
-  String get recipesFilter15Mins => '15 mins';
+  String get recipesFilter15Mins => '15 min';
 
   @override
-  String get recipesFilter30Mins => '30 mins';
+  String get recipesFilter30Mins => '30 min';
 
   @override
-  String get recipesFilter45Mins => '45 mins';
+  String get recipesFilter45Mins => '45 min';
 
   @override
-  String get recipesFilter60Mins => '60 mins';
+  String get recipesFilter60Mins => '60 min';
 
   @override
-  String get recipesFilterMaxPreparation => 'Max preparation time';
+  String get recipesFilterMaxPreparation => 'Tempo máximo de preparação';
 
   @override
-  String get recipesFilterMaxCooking => 'Max cooking time';
+  String get recipesFilterMaxCooking => 'Tempo máximo de confeção';
 
   @override
-  String get recipesSearchHint => 'Search by name...';
+  String get recipesSearchHint => 'Pesquisar por nome...';
 
   @override
   String recipeCardPortions(Object count) {
-    return 'Portions: $count';
+    return 'Doses: $count';
   }
 
   @override
   String recipeCardPreparation(Object minutes) {
-    return 'Preparation: $minutes mins';
+    return 'Preparação: $minutes min';
   }
 
   @override
   String recipeCardCooking(Object minutes) {
-    return 'Cooking: $minutes mins';
+    return 'Cozedura: $minutes min';
   }
 
   @override
-  String get recipeCardViewRecipe => 'View recipe';
+  String get recipeCardViewRecipe => 'Ver receita';
 
   @override
-  String get recipeDetailIngredients => 'Ingredients';
+  String get recipeDetailIngredients => 'Ingredientes';
 
   @override
-  String get recipeDetailPreparation => 'Preparation';
+  String get recipeDetailPreparation => 'Preparação';
 
   @override
   String recipeDetailPortions(Object count) {
-    return 'Portions: $count';
+    return 'Doses: $count';
   }
 
   @override
   String recipeDetailPreparationTime(Object minutes) {
-    return 'Preparation: $minutes mins';
+    return 'Preparação: $minutes min';
   }
 
   @override
   String recipeDetailCuissonTime(Object minutes) {
-    return 'Cuisson: $minutes mins';
+    return 'Cozedura: $minutes min';
   }
 
   @override
   String get aboutHeadline =>
-      'Help more people cook nourishing meals, more often.';
+      'Ajudar mais pessoas a cozinhar refeições nutritivas, mais vezes.';
 
   @override
   String get aboutIntro =>
-      'Healthy Recipe Finder was created to prove that healthy eating can be convenient, affordable, and genuinely delicious.';
+      'Healthy Recipe Finder foi criado para provar que comer de forma saudável pode ser prático, acessível e delicioso.';
 
   @override
   String get aboutIntroExtended =>
-      'We showcase quick, whole-food dishes that anyone can master-no fancy equipment, no ultra-processed shortcuts-just honest ingredients and straightforward steps.';
+      'Mostramos pratos rapidos e naturais que qualquer pessoa consegue preparar, sem equipamento especial e sem atalhos ultra-processados.';
 
   @override
-  String get aboutWhyWeExistTitle => 'Why we exist';
+  String get aboutWhyWeExistTitle => 'Por que existimos';
 
   @override
-  String get aboutWhyWeExistReason1Title => 'Cut through the noise.';
+  String get aboutWhyWeExistReason1Title => 'Menos ruído, mais cozinha.';
 
   @override
   String get aboutWhyWeExistReason1Description =>
-      'The internet is bursting with recipes, yet most busy cooks still default to take-away or packaged foods. We curate a tight collection of fool-proof dishes so you can skip the scrolling and start cooking.';
+      'A internet está cheia de receitas, mas muita gente continua a optar por take-away. Selecionamos receitas fiáveis para poupares tempo e começares logo a cozinhar.';
 
   @override
-  String get aboutWhyWeExistReason2Title => 'Empower home kitchens.';
+  String get aboutWhyWeExistReason2Title => 'Dar poder à cozinha de casa.';
 
   @override
   String get aboutWhyWeExistReason2Description =>
-      'When you control what goes into your meals, you control how you feel. Every recipe is built around unrefined ingredients and ready in about half an hour of active prep.';
+      'Quando controlas o que entra nas refeições, controlas como te sentes. Cada receita usa ingredientes simples e preparação ativa curta.';
 
   @override
-  String get aboutWhyWeExistReason3Title => 'Make healthy look good.';
+  String get aboutWhyWeExistReason3Title =>
+      'Comer saudável também é apetitoso.';
 
   @override
   String get aboutWhyWeExistReason3Description =>
-      'High-resolution imagery shows you exactly what success looks like-because we eat with our eyes first, and confidence matters.';
+      'Imagens de qualidade mostram exatamente o resultado esperado, porque também comemos com os olhos.';
 
   @override
-  String get aboutFoodPhilosophyTitle => 'Our food philosophy';
+  String get aboutFoodPhilosophyTitle => 'A nossa filosofia alimentar';
 
   @override
-  String get aboutFoodPhilosophyReason1Title => 'Whole ingredients first.';
+  String get aboutFoodPhilosophyReason1Title =>
+      'Ingredientes inteiros primeiro.';
 
   @override
   String get aboutFoodPhilosophyReason1Description =>
-      'Fresh produce, grains, legumes, herbs, and quality fats form the backbone of every recipe.';
+      'Produtos frescos, grãos, leguminosas, ervas e boas gorduras são a base de cada receita.';
 
   @override
-  String get aboutFoodPhilosophyReason2Title => 'Flavor without compromise.';
+  String get aboutFoodPhilosophyReason2Title => 'Sabor sem compromisso.';
 
   @override
   String get aboutFoodPhilosophyReason2Description =>
-      'Spices, citrus, and natural sweetness replace excess salt, sugar, and additives.';
+      'Especiarias, citrinos e doçura natural substituem excesso de sal, açúcar e aditivos.';
 
   @override
-  String get aboutFoodPhilosophyReason3Title => 'Respect for time.';
+  String get aboutFoodPhilosophyReason3Title => 'Respeito pelo tempo.';
 
   @override
   String get aboutFoodPhilosophyReason3Description =>
-      'Weeknight meals should slot into real schedules; weekend cooking can be leisurely but never wasteful.';
+      'As refeições da semana devem encaixar na vida real; ao fim de semana pode ser mais demorado, sem desperdício.';
 
   @override
-  String get aboutFoodPhilosophyReason4Title => 'Sustainable choices.';
+  String get aboutFoodPhilosophyReason4Title => 'Escolhas sustentáveis.';
 
   @override
   String get aboutFoodPhilosophyReason4Description =>
-      'Short ingredient lists cut down on food waste and carbon footprint, while plant-forward dishes keep things planet-friendly.';
+      'Listas de ingredientes curtas reduzem desperdício e pegada ambiental, enquanto pratos com base vegetal ajudam o planeta.';
 
   @override
-  String get aboutBeyondPlateTitle => 'Beyond the plate';
+  String get aboutBeyondPlateTitle => 'Para além do prato';
 
   @override
   String get aboutBeyondPlateIntro =>
-      'We believe food is a catalyst for community and well-being. By sharing approachable recipes, we hope to:';
+      'Acreditamos que a comida aproxima pessoas e melhora o bem-estar. Ao partilhar receitas acessíveis, queremos:';
 
   @override
   String get aboutBeyondPlatePoint1 =>
-      'Encourage family dinners and social cooking.';
+      'Incentivar jantares em família e cozinha partilhada.';
 
   @override
   String get aboutBeyondPlatePoint2 =>
-      'Reduce reliance on single-use packaging and delivery waste.';
+      'Reduzir dependência de embalagens descartáveis e resíduos de entrega.';
 
   @override
   String get aboutBeyondPlatePoint3 =>
-      'Spark curiosity about seasonal produce and local agriculture.';
+      'Despertar curiosidade por produtos sazonais e agricultura local.';
 
   @override
-  String get ctaTitle => 'Ready to cook smarter ?';
+  String get ctaTitle => 'Pronto para cozinhar de forma mais inteligente?';
 
   @override
   String get ctaDescription =>
-      'Hit the button, pick a recipe, and get dinner on the table-fast.';
+      'Clica no botão, escolhe uma receita e tem o jantar na mesa rapidamente.';
 
   @override
-  String get ctaBrowseRecipes => 'Browse recipes';
+  String get ctaBrowseRecipes => 'Ver receitas';
 
   @override
   String get dishTsuvianTitle => 'Tsuvian';
