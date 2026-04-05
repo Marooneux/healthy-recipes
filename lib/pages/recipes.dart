@@ -4,6 +4,7 @@ import '/widgets/searchBar.dart';
 import '/widgets/recipeItem.dart';
 import '/widgets/navbar.dart';
 import '/themes/spacing.dart';
+import '/themes/colors.dart';
 import '/themes/typography.dart';
 import '/modele/database.dart';
 import '/modele/dish.dart';
@@ -66,8 +67,8 @@ class _RecipesState extends State<Recipes> {
                 ),
                 SizedBox(height: AppSpacing.spacing100),
                 Text(
-                  'Discover our quick and delicious dishes Use the search bar to find a recipe by name or ingredient, or simply scroll dow the list.',
-                  style: AppTypography.preset9,
+                  'Discover our quick and delicious dishes Use the search bar to find a recipe by name, preparation or cook time, or simply scroll dow the list.',
+                  style: AppTypography.preset6
                 ),
               ],
             ),

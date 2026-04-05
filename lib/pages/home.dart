@@ -28,7 +28,7 @@ class MyHome extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing200),
                 child: Text(
-                  "Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.",
+                  "Discover our quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.",
                   style: AppTypography.preset4.copyWith(
                     color: AppColors.neutral600,
                   ),
@@ -80,7 +80,7 @@ class MyHome extends StatelessWidget {
                             "assets/images/icons/search_menu_hamburger.svg",
                         title: "Search in seconds",
                         description:
-                            "Filter by name or ingredient and jump straight to the recipe you need.",
+                            "Filter by name or preparation time and jump straight to the recipe you need.",
                       ),
                     ),
                   ],
@@ -123,8 +123,8 @@ class BuiltForLife extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(top: AppSpacing.spacing250),
           child: Text(
-            "Cooking shouldn’t be complicated. These recipes come in under "
-            "30 minutes of active time, fit busy schedules, and taste good "
+            "Cooking shouldn’t be complicated. These recipes are simple to make, "
+            "fit busy schedules, and taste good "
             "enough to repeat.",
             textAlign: TextAlign.left,
             style: AppTypography.preset6,
