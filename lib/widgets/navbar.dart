@@ -35,9 +35,9 @@ class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
             Navigator.pushNamedAndRemoveUntil(context, route, (r) => false);
           },
           itemBuilder: (context) => [
-            _buildItem('/home', Icons.home_outlined, 'Accueil', currentRoute),
-            _buildItem('/recipes', Icons.restaurant_menu_outlined, 'Recettes', currentRoute),
-            _buildItem('/about', Icons.info_outline, 'À propos', currentRoute),
+            _buildItem('/home', Icons.home_outlined, 'Home', currentRoute),
+            _buildItem('/about', Icons.info_outline, 'About', currentRoute),
+            _buildItem('/recipes', Icons.restaurant_menu_outlined, 'Recipes', currentRoute),
           ],
         ),
         const SizedBox(width: AppSpacing.spacing100),
