@@ -36,7 +36,10 @@ class MyHome extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing400),
-                child: AppButton(label: "Start Exploring"),
+                child: AppButton(
+                  label: "Start Exploring",
+                  onPressed: () => Navigator.pushNamed(context, '/recipes'),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: AppSpacing.spacing500),

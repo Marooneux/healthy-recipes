@@ -35,7 +35,10 @@ class CallToAction extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(top: AppSpacing.spacing400),
-              child: AppButton(label: "Browse recipes"),
+              child: AppButton(
+                label: "Browse recipes",
+                onPressed: () => Navigator.pushNamed(context, '/recipes'),
+              ),
             ),
           ],
         ),
