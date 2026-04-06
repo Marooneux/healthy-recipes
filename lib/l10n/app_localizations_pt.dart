@@ -241,88 +241,91 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get dishTsuvianDescription =>
-      'Tsuvian is a traditional mongolian dish. It\'s made using noodles and meat.';
+      'O tsuvian é um prato tradicional mongol à base de massa e carne.';
 
   @override
   String get dishTsuvianIngredients =>
-      '200g of your noodle of choice||300g of beef cut in stripes||1 diced onion||2 carrots cut into julienne||1 diced red pepper||2 cloves of garlic||2 tbsp vegetable oil||Salt and pepper';
+      '200g de massa à sua escolha||300g de carne de vaca em tiras||1 cebola picada||2 cenouras em juliana||1 pimento vermelho em cubos||2 dentes de alho||2 c. de sopa de óleo vegetal||Sal e pimenta';
 
   @override
   String get dishTsuvianSteps =>
-      'Heat oil in a large pan or wok over high heat. Sauté the onion and garlic for 2 minutes.||Add the beef strips and stir-fry until golden, about 5 minutes.||Add the carrots and bell pepper. Stir and cook for 5 more minutes.||Add the raw noodles directly to the pan with a glass of water. Stir, cover, and cook over medium heat for 15 to 20 minutes, stirring regularly.||Season with salt and pepper. Serve hot.';
+      'Aqueça o óleo numa frigideira grande ou wok em lume alto. Refogue a cebola e o alho durante 2 minutos.||Adicione as tiras de carne e salteie até dourar, cerca de 5 minutos.||Adicione as cenouras e o pimento. Misture e cozinhe por mais 5 minutos.||Adicione a massa crua com um copo de água. Mexa, tape e cozinhe em lume médio durante 15 a 20 minutos, mexendo regularmente.||Tempere com sal e pimenta. Sirva quente.';
 
   @override
   String get dishRatatouilleTitle => 'Ratatouille';
 
   @override
   String get dishRatatouilleDescription =>
-      'Ratatouille is a classic Provençal stewed vegetable dish from the south of France.';
+      'A ratatouille é um clássico guisado provençal de legumes do sul de França.';
 
   @override
   String get dishRatatouilleIngredients =>
-      '1 eggplant||2 zucchinis||1 red bell pepper||1 yellow bell pepper||3 tomatoes||1 onion||2 garlic cloves||Olive oil||Herbes de Provence||Salt and pepper';
+      '1 beringela||2 curgetes||1 pimento vermelho||1 pimento amarelo||3 tomates||1 cebola||2 dentes de alho||Azeite||Ervas de Provence||Sal e pimenta';
 
   @override
   String get dishRatatouilleSteps =>
-      'Dice all vegetables.||Sauté the onion and garlic in olive oil for 3 minutes.||Add the eggplant and cook for 5 minutes.||Add the zucchinis, bell peppers, and tomatoes.||Season with herbes de Provence, salt, and pepper.||Cover and simmer over low heat for 35 minutes.';
+      'Corte todos os legumes em cubos.||Refogue a cebola e o alho em azeite durante 3 minutos.||Adicione a beringela e cozinhe por 5 minutos.||Adicione as curgetes, os pimentos e os tomates.||Tempere com ervas de Provence, sal e pimenta.||Tape e cozinhe em lume brando durante 35 minutos.';
 
   @override
   String get dishQuicheLorraineTitle => 'Quiche Lorraine';
 
   @override
   String get dishQuicheLorraineDescription =>
-      'Quiche Lorraine is a classic French savoury tart made with bacon and cream.';
+      'A quiche lorraine é uma tarte salgada francesa clássica preparada com bacon e natas.';
 
   @override
   String get dishQuicheLorraineIngredients =>
-      '1 shortcrust pastry||200g bacon lardons||3 eggs||200ml heavy cream||200ml milk||100g grated gruyère||Salt, pepper, and nutmeg';
+      '1 massa quebrada||200g de bacon em cubos||3 ovos||200ml de natas||200ml de leite||100g de gruyère ralado||Sal, pimenta e noz-moscada';
 
   @override
   String get dishQuicheLorraineSteps =>
-      'Preheat the oven to 180°C.||Roll out the pastry into a tart tin.||Cook the lardons in a dry pan until lightly browned.||Mix the eggs, cream, and milk together. Season.||Spread the lardons over the pastry and pour the egg mixture on top.||Sprinkle with grated gruyère.||Bake for 35 minutes until golden.';
+      'Pré-aqueça o forno a 180°C.||Estenda a massa numa forma de tarte.||Frite o bacon numa frigideira seca até dourar levemente.||Misture os ovos, as natas e o leite. Tempere.||Espalhe o bacon sobre a massa e verta a mistura de ovos por cima.||Polvilhe com gruyère ralado.||Leve ao forno durante 35 minutos até dourar.';
 
   @override
   String get dishPelmeniTitle => 'Pelmeni';
 
   @override
   String get dishPelmeniDescription =>
-      'Pelmeni are traditional Russian dumplings filled with seasoned minced meat, boiled and served with butter or sour cream.';
+      'Os pelmeni são rissóis russos tradicionais recheados com carne picada temperada, cozidos e servidos com manteiga ou creme de leite.';
 
   @override
   String get dishPelmeniIngredients =>
-      '300g plain flour||1 egg||150ml warm water||1 tsp salt (for dough)||250g ground beef||250g ground pork||1 onion, finely grated||Salt and pepper||Butter and sour cream to serve';
+      '300g de farinha||1 ovo||150ml de água morna||1 c. de chá de sal (para a massa)||250g de carne de vaca picada||250g de carne de porco picada||1 cebola finamente ralada||Sal e pimenta||Manteiga e creme de leite para servir';
 
   @override
   String get dishPelmeniSteps =>
-      'Mix flour, egg, water, and salt into a smooth dough. Cover and rest for 30 minutes.||Combine the ground beef, pork, grated onion, salt, and pepper to make the filling.||Roll the dough thinly and cut out circles about 7cm in diameter.||Place a small teaspoon of filling in the centre of each circle.||Fold the dough over and pinch the edges firmly, then join the two ends to form a crescent shape.||Bring a large pot of salted water to a boil. Cook the pelmeni in batches for 8 to 10 minutes until they float and are cooked through.||Serve hot with a knob of butter and a dollop of sour cream.';
+      'Misture a farinha, o ovo, a água e o sal até obter uma massa lisa. Tape e deixe repousar 30 minutos.||Misture a carne de vaca, a de porco, a cebola ralada, o sal e a pimenta para preparar o recheio.||Estenda a massa finamente e corte discos de cerca de 7cm de diâmetro.||Coloque uma colherinha de recheio no centro de cada disco.||Dobre a massa e aperte bem as bordas, depois una as duas extremidades para formar uma meia-lua.||Leve uma panela grande com água salgada a ferver. Cozinhe os pelmeni em lotes durante 8 a 10 minutos até subirem à superfície.||Sirva quente com manteiga e creme de leite.';
 
   @override
   String get dishShakshukaTitle => 'Shakshuka';
 
   @override
   String get dishShakshukaDescription =>
-      'Shakshuka is a North African and Middle Eastern dish of eggs poached in a spiced tomato and pepper sauce.';
+      'A shakshuka é um prato norte-africano e do Médio Oriente composto por ovos escalfados num molho picante de tomate e pimento.';
 
   @override
   String get dishShakshukaIngredients =>
-      '6 eggs||400g canned crushed tomatoes||2 red bell peppers, diced||1 onion, diced||3 garlic cloves, minced||1 tsp cumin||1 tsp paprika||1/2 tsp chili flakes||2 tbsp olive oil||Salt and pepper||Fresh parsley or coriander';
+      '6 ovos||400g de tomate triturado em conserva||2 pimentos vermelhos em cubos||1 cebola em cubos||3 dentes de alho picados||1 c. de chá de cominhos||1 c. de chá de paprika||1/2 c. de chá de flocos de malagueta||2 c. de sopa de azeite||Sal e pimenta||Salsa ou coentros frescos';
 
   @override
   String get dishShakshukaSteps =>
-      'Heat olive oil in a wide pan over medium heat. Sauté the onion for 5 minutes.||Add the garlic and bell peppers. Cook for another 5 minutes.||Stir in the cumin, paprika, and chili flakes. Cook for 1 minute.||Pour in the crushed tomatoes. Season with salt and pepper. Simmer for 10 minutes.||Make small wells in the sauce and crack an egg into each one.||Cover and cook over low heat for 5 to 7 minutes until the egg whites are set but yolks are still runny.||Garnish with fresh herbs and serve with crusty bread.';
+      'Aqueça o azeite numa frigideira larga em lume médio. Refogue a cebola durante 5 minutos.||Adicione o alho e os pimentos. Cozinhe por mais 5 minutos.||Adicione os cominhos, a paprika e os flocos de malagueta. Cozinhe 1 minuto.||Verta o tomate triturado. Tempere com sal e pimenta. Cozinhe em lume brando 10 minutos.||Faça pequenas covas no molho e parta um ovo em cada uma.||Tape e cozinhe em lume brando 5 a 7 minutos até as claras estarem cozidas e as gemas ainda cremosas.||Decore com ervas frescas e sirva com pão crocante.';
 
   @override
-  String get dishPadThaiCrevettesTitle => 'Pad Thai crevettes';
+  String get dishPadThaiCrevettesTitle => 'Pad Thai com camarão';
 
   @override
   String get dishPadThaiCrevettesDescription =>
-      'Pad Thai is a stir-fried rice noodle dish from Thailand, packed with shrimp, tofu, eggs, and a tangy tamarind sauce.';
+      'O pad thai é um prato tailandês de massa de arroz salteada com camarão, tofu, ovos e um molho azedo de tamarindo.';
 
   @override
   String get dishPadThaiCrevettesIngredients =>
-      '200g flat rice noodles||150g shrimp, peeled||100g firm tofu, cubed||2 eggs||3 tbsp tamarind paste||2 tbsp fish sauce||1 tbsp sugar||2 spring onions, chopped||50g bean sprouts||2 tbsp vegetable oil||Crushed peanuts and lime to serve';
+      '200g de massa de arroz larga||150g de camarão descascado||100g de tofu firme em cubos||2 ovos||3 c. de sopa de pasta de tamarindo||2 c. de sopa de molho de peixe||1 c. de sopa de açúcar||2 cebolinhas picadas||50g de rebentos de feijão||2 c. de sopa de óleo vegetal||Amendoins picados e lima para servir';
 
   @override
   String get dishPadThaiCrevettesSteps =>
-      'Soak the rice noodles in warm water for 20 minutes, then drain.||Mix the tamarind paste, fish sauce, and sugar in a small bowl. Set aside.||Heat oil in a wok over high heat. Fry the tofu until golden, then push to the side.||Add the shrimp and cook until pink. Push to the side.||Crack the eggs into the wok and scramble lightly.||Add the noodles and pour in the sauce. Toss everything together over high heat for 3 minutes.||Add the bean sprouts and spring onions. Toss for 1 more minute.||Serve topped with crushed peanuts and a wedge of lime.';
+      'Demolhe a massa de arroz em água morna durante 20 minutos, depois escorra.||Misture a pasta de tamarindo, o molho de peixe e o açúcar numa tigela. Reserve.||Aqueça o óleo num wok em lume alto. Frite o tofu até dourar e empurre para o lado.||Adicione o camarão e cozinhe até ficar rosado. Empurre para o lado.||Parta os ovos no wok e mexa levemente.||Adicione a massa e verta o molho. Salteie tudo em lume alto durante 3 minutos.||Adicione os rebentos de feijão e as cebolinhas. Salteie por mais 1 minuto.||Sirva com amendoins picados e um quarto de lima.';
+
+  @override
+  String get footerMadeWith => 'Feito com ❤️';
 }

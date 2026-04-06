@@ -325,4 +325,7 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get dishPadThaiCrevettesSteps =>
       'Faites tremper les nouilles de riz dans de l\'eau tiede 20 minutes, puis egouttez.||Melangez la pate de tamarin, la sauce de poisson et le sucre dans un bol. Reservez.||Chauffez l\'huile dans un wok a feu vif. Faites dorer le tofu puis poussez-le sur le cote.||Ajoutez les crevettes et cuisez jusqu\'a ce qu\'elles rosissent. Poussez-les sur le cote.||Cassez les oeufs dans le wok et brouillez-les legerement.||Ajoutez les nouilles et versez la sauce. Faites sauter l\'ensemble 3 minutes a feu vif.||Ajoutez les pousses de haricot et les oignons nouveaux. Faites sauter 1 minute de plus.||Servez avec des cacahuetes concassees et un quartier de citron vert.';
+
+  @override
+  String get footerMadeWith => 'Fait avec ❤️';
 }

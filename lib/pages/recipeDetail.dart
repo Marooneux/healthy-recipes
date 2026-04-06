@@ -5,6 +5,7 @@ import '../themes/spacing.dart';
 import '../themes/typography.dart';
 import '../widgets/step.dart';
 import '../widgets/navbar.dart';
+import '../widgets/footer.dart';
 import '../modele/dish.dart';
 import '../modele/dish_localization.dart';
 import '../l10n/app_localizations.dart';
@@ -99,6 +100,8 @@ class RecipeDetailPage extends StatelessWidget {
             const SizedBox(height: AppSpacing.spacing300),
             _buildEtapes(l10n, localizedSteps),
           ],
+          const SizedBox(height: AppSpacing.spacing300),
+          const AppFooter(),
         ],
       ),
     );
