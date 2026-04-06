@@ -9,7 +9,7 @@
 
 | Donnée              | Valeur          |
 |:--------------------|:----------------|
-| **Application**     | healthy recipes |
+| **Application**     | Healthy recipes finder |
 | **Numéro d'équipe** | 7               |
 | **Identifiant 1**   | wcl5016a        |
 | **Identifiant 2**   | cmc4882a        |
