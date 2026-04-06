@@ -26,4 +26,5 @@ flutter:
   generate: true
   assets:
     - assets/images/
+    - assets/images/dishes/
     - assets/images/icons/

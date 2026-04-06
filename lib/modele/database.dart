@@ -11,7 +11,7 @@ Future<Database> getDatabase() async {
 
   db = await openDatabase(
     path,
-    version: 4,
+    version: 5,
     onUpgrade: (db, oldVersion, newVersion) async {
       await db.execute('DROP TABLE IF EXISTS dish');
       await _createAndPopulate(db);
@@ -40,7 +40,7 @@ Future<void> _createAndPopulate(Database db) async {
   ''');
 
   await db.insert('dish', {
-    'imageUrl': 'assets/images/tsuvian.jpg',
+    'imageUrl': 'assets/images/dishes/tsuvian.jpg',
     'title': 'Tsuvian',
     'description': 'Tsuvian is a traditional mongolian dish. It\'s made using noodles and meat.',
     'portions': 2,
@@ -51,7 +51,7 @@ Future<void> _createAndPopulate(Database db) async {
   });
 
   await db.insert('dish', {
-    'imageUrl': 'assets/images/ratatouille.jpg',
+    'imageUrl': 'assets/images/dishes/ratatouille.jpg',
     'title': 'Ratatouille',
     'description': 'Ratatouille is a classic Provençal stewed vegetable dish from the south of France.',
     'portions': 4,
@@ -62,7 +62,7 @@ Future<void> _createAndPopulate(Database db) async {
   });
 
   await db.insert('dish', {
-    'imageUrl': 'assets/images/quiche.webp',
+    'imageUrl': 'assets/images/dishes/quiche.webp',
     'title': 'Quiche Lorraine',
     'description': 'Quiche Lorraine is a classic French savoury tart made with bacon and cream.',
     'portions': 6,
@@ -73,7 +73,7 @@ Future<void> _createAndPopulate(Database db) async {
   });
 
   await db.insert('dish', {
-    'imageUrl': 'assets/images/pelmeni.png',
+    'imageUrl': 'assets/images/dishes/pelmeni.png',
     'title': 'Pelmeni',
     'description': 'Pelmeni are traditional Russian dumplings filled with seasoned minced meat, boiled and served with butter or sour cream.',
     'portions': 4,
@@ -84,7 +84,7 @@ Future<void> _createAndPopulate(Database db) async {
   });
 
   await db.insert('dish', {
-    'imageUrl': 'assets/images/shakshuka.png',
+    'imageUrl': 'assets/images/dishes/shakshuka.png',
     'title': 'Shakshuka',
     'description': 'Shakshuka is a North African and Middle Eastern dish of eggs poached in a spiced tomato and pepper sauce.',
     'portions': 3,
@@ -95,7 +95,7 @@ Future<void> _createAndPopulate(Database db) async {
   });
 
   await db.insert('dish', {
-    'imageUrl': 'assets/images/padthai.png',
+    'imageUrl': 'assets/images/dishes/padthai.png',
     'title': 'Pad Thai crevettes',
     'description': 'Pad Thai is a stir-fried rice noodle dish from Thailand, packed with shrimp, tofu, eggs, and a tangy tamarind sauce.',
     'portions': 2,

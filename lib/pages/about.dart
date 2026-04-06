@@ -5,6 +5,7 @@ import '/themes/spacing.dart';
 import '/themes/typography.dart';
 import '/widgets/call_to_action.dart';
 import '/widgets/navbar.dart';
+import '/widgets/footer.dart';
 import '/l10n/app_localizations.dart';
 
 class About extends StatelessWidget {
@@ -98,6 +99,10 @@ class About extends StatelessWidget {
               foodPhilosophyReasons,
               beyondPlateSection,
               CallToAction(),
+              const Padding(
+                padding: EdgeInsets.only(top: AppSpacing.spacing400),
+                child: AppFooter(),
+              ),
           ],
         ),
         ),

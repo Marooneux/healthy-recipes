@@ -627,6 +627,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Soak the rice noodles in warm water for 20 minutes, then drain.||Mix the tamarind paste, fish sauce, and sugar in a small bowl. Set aside.||Heat oil in a wok over high heat. Fry the tofu until golden, then push to the side.||Add the shrimp and cook until pink. Push to the side.||Crack the eggs into the wok and scramble lightly.||Add the noodles and pour in the sauce. Toss everything together over high heat for 3 minutes.||Add the bean sprouts and spring onions. Toss for 1 more minute.||Serve topped with crushed peanuts and a wedge of lime.'**
   String get dishPadThaiCrevettesSteps;
+
+  /// No description provided for @footerMadeWith.
+  ///
+  /// In en, this message translates to:
+  /// **'Made with ❤️'**
+  String get footerMadeWith;
 }
 
 class _AppLocalizationsDelegate

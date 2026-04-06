@@ -6,6 +6,7 @@ import '/themes/typography.dart';
 import '/widgets/buttons.dart';
 import '/widgets/call_to_action.dart';
 import '/widgets/navbar.dart';
+import '/widgets/footer.dart';
 import '/l10n/app_localizations.dart';
 
 class MyHome extends StatelessWidget {
@@ -103,6 +104,10 @@ class MyHome extends StatelessWidget {
                   right: AppSpacing.spacing200,
                 ),
                 child: CallToAction(),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: AppSpacing.spacing400),
+                child: AppFooter(),
               ),
             ],
           ),

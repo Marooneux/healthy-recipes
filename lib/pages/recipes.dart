@@ -3,6 +3,7 @@ import '/widgets/select.dart';
 import '/widgets/searchBar.dart';
 import '/widgets/recipeItem.dart';
 import '/widgets/navbar.dart';
+import '/widgets/footer.dart';
 import '/themes/spacing.dart';
 import '/themes/typography.dart';
 import '/modele/database.dart';
@@ -119,6 +120,7 @@ class _RecipesState extends State<Recipes> {
                 );
               },
             ),
+          const AppFooter(),
         ],
       ),
     );
