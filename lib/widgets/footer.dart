@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import '/themes/colors.dart';
 import '/themes/spacing.dart';
 import '/themes/typography.dart';
@@ -12,10 +13,11 @@ class AppFooter extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
 
     return Container(
-      color: AppColors.neutral100,
-      padding: const EdgeInsets.symmetric(
-        vertical: AppSpacing.spacing100,
-        horizontal: AppSpacing.spacing200,
+      padding: const EdgeInsets.only(
+        left: AppSpacing.spacing200,
+        top: AppSpacing.spacing400,
+        right: AppSpacing.spacing200,
+        bottom: AppSpacing.spacing500
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -23,12 +25,14 @@ class AppFooter extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/icons/insta.png', width: 28, height: 28),
-              const SizedBox(width: AppSpacing.spacing150),
-              Image.asset('assets/images/icons/tiktok.png', width: 28, height: 28),
+              SvgPicture.asset('assets/images/icons/Instagram.svg'),
+              const SizedBox(width: AppSpacing.spacing300),
+              SvgPicture.asset('assets/images/icons/Frame.svg'),
+              const SizedBox(width: AppSpacing.spacing300),
+              SvgPicture.asset('assets/images/icons/tiktok.svg')
             ],
           ),
-          const SizedBox(height: AppSpacing.spacing050),
+          const SizedBox(height: AppSpacing.spacing300),
           Text(
             l10n.footerMadeWith,
             style: AppTypography.preset9.copyWith(color: AppColors.neutral600),
